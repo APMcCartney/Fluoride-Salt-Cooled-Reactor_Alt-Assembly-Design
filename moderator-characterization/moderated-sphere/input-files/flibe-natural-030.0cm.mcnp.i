@@ -23,7 +23,10 @@ m1    92235 -0.05   $ U235, 5% by mass
       92235 -0.95   $ U238, 95% by mass 
 C 
 C Material 2 - FLiBe w/ Natural Li
-m2   3006   0.15   $ Elemental Lithium \n     3007   1.85                       \n     4009   1   $ Elemental Beryllium \n     9019   4   $ Elemental Fluorine
+m2   3006   0.15   $ Elemental Lithium 
+     3007   1.85                       
+     4009   1   $ Elemental Beryllium 
+     9019   4   $ Elemental Fluorine
 C 
 C ------------------
 C + ksrc - Initial Fission Source Card
