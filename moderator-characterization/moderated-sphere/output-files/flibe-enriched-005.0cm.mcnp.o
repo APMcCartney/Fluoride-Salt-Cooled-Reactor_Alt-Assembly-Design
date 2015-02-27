@@ -1,0 +1,1568 @@
+          Code Name & Version = MCNP6, 1.0
+  
+     _/      _/        _/_/_/       _/      _/       _/_/_/         _/_/_/
+    _/_/  _/_/      _/             _/_/    _/       _/    _/     _/       
+   _/  _/  _/      _/             _/  _/  _/       _/_/_/       _/_/_/    
+  _/      _/      _/             _/    _/_/       _/           _/    _/   
+ _/      _/        _/_/_/       _/      _/       _/             _/_/      
+  
+  +---------------------------------------------------------------------+
+  | Copyright 2008. Los Alamos National Security, LLC.  All rights      |
+  | reserved.                                                           |
+  |   This material was produced under U.S. Government contract         |
+  | DE-AC52-06NA25396 for Los Alamos National Laboratory, which is      |
+  | operated by Los Alamos National Security, LLC, for the U.S.         |
+  | Department of Energy. The Government is granted for itself and      |
+  | others acting on its behalf a paid-up, nonexclusive, irrevocable    |
+  | worldwide license in this material to reproduce, prepare derivative |
+  | works, and perform publicly and display publicly. Beginning five    |
+  | (5) years after 2008, subject to additional five-year worldwide     |
+  | renewals, the Government is granted for itself and others acting on |
+  | its behalf a paid-up, nonexclusive, irrevocable worldwide license   |
+  | in this material to reproduce, prepare derivative works, distribute |
+  | copies to the public, perform publicly and display publicly, and to |
+  | permit others to do so. NEITHER THE UNITED STATES NOR THE UNITED    |
+  | STATES DEPARTMENT OF ENERGY, NOR LOS ALAMOS NATIONAL SECURITY, LLC, |
+  | NOR ANY OF THEIR EMPLOYEES, MAKES ANY WARRANTY, EXPRESS OR IMPLIED, |
+  | OR ASSUMES ANY LEGAL LIABILITY OR RESPONSIBILITY FOR THE ACCURACY,  |
+  | COMPLETENESS, OR USEFULNESS OF ANY INFORMATION, APPARATUS, PRODUCT, |
+  | OR PROCESS DISCLOSED, OR REPRESENTS THAT ITS USE WOULD NOT INFRINGE |
+  | PRIVATELY OWNED RIGHTS.                                             |
+  +---------------------------------------------------------------------+
+  
+1mcnp     version 6     ld=05/08/13                     02/27/15 01:42:58 
+ *************************************************************************                 probid =  02/27/15 01:42:58 
+ i=./input-files/flibe-enriched-005.0cm.mcnp.i o=./output-files/flibe-enriched-00
+
+ 
+  warning.  Physics models disabled.
+         1-       Moderator Qualification - Uranium Marble - FLiBe w/ Enriched Li - 005.0 cm      
+         2-       C                                                                               
+         3-       C                                                                               
+         4-       C Cell Cards                                                                    
+         5-       C ----------------                                                              
+         6-       C j     m       d                   geom        params                          
+         7-         1     1      -19.1                  -1        imp:n=1                         
+         8-         2     2      -2.1228808                1 -2        imp:n=1                    
+         9-       999     0                              2        imp:n=0                         
+        10-                                                                                       
+        11-       C Surface Cards                                                                 
+        12-       C ------------------                                                            
+        13-       C j     a       list                                                            
+        14-         1     so      1.23240339093                                                   
+        15-         2     so      6.23240339093                                                   
+        16-                                                                                       
+        17-       C Data Cards                                                                    
+        18-       C ------------------                                                            
+        19-       C + mn - Material Cards                                                         
+        20-       C ---------------------------                                                   
+        21-       C Material 1 - Enriched Uranium Metal                                           
+        22-       m1    92235 -0.05   $ U235, 5% by mass                                          
+        23-             92235 -0.95   $ U238, 95% by mass                                         
+        24-       C                                                                               
+        25-       C Material 2 - FLiBe w/ Enriched Li                                             
+        26-       m2   3006   0.001 $ Lithium-6 \n     3007   1.999 $ Lithium-7 \n     4009   1   
+        27-       C                                                                               
+        28-       C ------------------                                                            
+        29-       C + ksrc - Initial Fission Source Card                                          
+        30-       C ---------------------------                                                   
+        31-       ksrc 0 0 0                                                                      
+        32-       C                                                                               
+        33-       C ------------------                                                            
+        34-       C + kcode - Criticality Card                                                    
+        35-       C ---------------------------                                                   
+        36-       kcode 75000 0.5 50 150                                                          
+ 
+  comment.  total fission nubar data are being used.
+ 
+  warning.  kcode usually needs s(a,b) physics (mt card)
+ 
+  warning.    1 materials had unnormalized fractions. print table 40.
+1cells                                                                                                  print table 60
+
+                               atom        gram                                            neutron                                     
+              cell      mat   density     density     volume       mass            pieces importance                                   
+
+        1        1        1  4.89360E-02 1.91000E+01 7.84056E+00 1.49755E+02           1  1.0000E+00                                   
+        2        2        2  2.12532E-01 2.12288E+00 1.00620E+03 2.13604E+03           1  1.0000E+00                                   
+        3      999        0  0.00000E+00 0.00000E+00 0.00000E+00 0.00000E+00           0  0.0000E+00                                   
+
+ total                                               1.01404E+03 2.28580E+03
+
+ ***************************************************
+ * Random Number Generator  =                    1 *
+ * Random Number Seed       =       19073486328125 *
+ * Random Number Multiplier =       19073486328125 *
+ * Random Number Adder      =                    0 *
+ * Random Number Bits Used  =                   48 *
+ * Random Number Stride     =               152917 *
+ ***************************************************
+
+
+         3 warning messages so far.
+1cross-section tables                                                                                   print table 100
+     XSDIR used: /opt/local/codes/mcnp/MCNP_DATA/xsdir_mcnp6.1
+
+     table    length
+
+                        tables from file xdata/endf71x/Li/3006.710nc                                     
+
+ particle-production data for tritons   being expunged from   3006.80c
+ particle-production data for alphas    being expunged from   3006.80c
+   3006.80c   21563  Li6 ENDF71x (jlconlin)  Ref. see jlconlin (ref 09/10/2012  10:00:53)         mat 325      12/13/12
+
+                        tables from file xdata/endf71x/U/92235.710nc                                     
+
+  92235.80c  680846  U235 ENDF71x (jlconlin)  Ref. see jlconlin (ref 09/total nu 10:00:53)        mat9228      12/19/12
+                     probability tables used from 2.2500E-03 to 2.5000E-02 mev.
+
+  total      702409
+
+1particles and energy limits                                                                            print table 101
+
+                         particle      maximum       smallest      largest       always        always
+                         cutoff        particle      table         table         use table     use model
+   particle type         energy        energy        maximum       maximum       below         above
+
+    1  n    neutron     0.0000E+00    1.0000E+36    2.0000E+01    2.0000E+01    1.0000E+36    1.0000E+36
+ 
+
+ ***********************************************************************************************************************
+
+ dump no.    1 on file ./output-files/flibe-enriched-005.0cm.mcnp.r     nps =           0     coll =              0    
+ ctm =        0.00   nrn =                 0
+
+ source distribution written to file ./output-files/flibe-enriched-005.0cm.mcnp.s        cycle=     0
+
+         3 warning messages so far.
+
+ comment.
+ comment. entropy of the fission source distribution will be computed
+ comment.
+ comment. the mesh for source entropy is based on the site coordinates
+ comment.   using 15 x 15 x 15 =  3375  mesh cells
+ comment.
+ comment.     Xmin= -2.2256E+00     Xmax=  2.2158E+00
+ comment.     Ymin= -2.2182E+00     Ymax=  2.2156E+00
+ comment.     Zmin= -2.2187E+00     Zmax=  2.2249E+00
+ comment.
+ comment. the mesh will be automatically expanded if necessary to
+ comment.   encompass the entire fission source distribution
+ comment.
+
+1estimated keff results by cycle                                                                        print table 175
+
+ cycle     1    k(collision)  0.216897    prompt removal lifetime(abs)  5.6452E-01    source points generated  32712
+                                          source_entropy =     7.4032E+00
+
+ cycle     2    k(collision)  0.185313    prompt removal lifetime(abs)  5.3851E-01    source points generated  64074
+                                          source_entropy =     8.1673E+00
+
+ cycle     3    k(collision)  0.173342    prompt removal lifetime(abs)  5.3684E-01    source points generated  70134
+                                          source_entropy =     8.3327E+00
+
+ cycle     4    k(collision)  0.171240    prompt removal lifetime(abs)  5.3506E-01    source points generated  74105
+                                          source_entropy =     8.3786E+00
+
+ cycle     5    k(collision)  0.169843    prompt removal lifetime(abs)  5.3717E-01    source points generated  74450
+                                          source_entropy =     8.3984E+00
+
+ cycle     6    k(collision)  0.166529    prompt removal lifetime(abs)  5.3666E-01    source points generated  73584
+                                          source_entropy =     8.3958E+00
+
+ cycle     7    k(collision)  0.167882    prompt removal lifetime(abs)  5.3339E-01    source points generated  75602
+                                          source_entropy =     8.3955E+00
+
+ cycle     8    k(collision)  0.166885    prompt removal lifetime(abs)  5.3459E-01    source points generated  74706
+                                          source_entropy =     8.4050E+00
+
+ cycle     9    k(collision)  0.168198    prompt removal lifetime(abs)  5.3167E-01    source points generated  75634
+                                          source_entropy =     8.4024E+00
+
+ cycle    10    k(collision)  0.166739    prompt removal lifetime(abs)  5.3729E-01    source points generated  74303
+                                          source_entropy =     8.4054E+00
+
+ cycle    11    k(collision)  0.167296    prompt removal lifetime(abs)  5.3393E-01    source points generated  75238
+                                          source_entropy =     8.4169E+00
+
+ cycle    12    k(collision)  0.168012    prompt removal lifetime(abs)  5.3715E-01    source points generated  75290
+                                          source_entropy =     8.4104E+00
+
+ cycle    13    k(collision)  0.168034    prompt removal lifetime(abs)  5.3523E-01    source points generated  74904
+                                          source_entropy =     8.4101E+00
+
+ cycle    14    k(collision)  0.167155    prompt removal lifetime(abs)  5.3218E-01    source points generated  74525
+                                          source_entropy =     8.4062E+00
+
+ cycle    15    k(collision)  0.168338    prompt removal lifetime(abs)  5.3671E-01    source points generated  75619
+                                          source_entropy =     8.3975E+00
+
+ cycle    16    k(collision)  0.166438    prompt removal lifetime(abs)  5.3452E-01    source points generated  74198
+                                          source_entropy =     8.4036E+00
+
+ cycle    17    k(collision)  0.167799    prompt removal lifetime(abs)  5.3307E-01    source points generated  75613
+                                          source_entropy =     8.4061E+00
+
+ cycle    18    k(collision)  0.167473    prompt removal lifetime(abs)  5.3495E-01    source points generated  74961
+                                          source_entropy =     8.4108E+00
+
+ cycle    19    k(collision)  0.166605    prompt removal lifetime(abs)  5.3331E-01    source points generated  74516
+                                          source_entropy =     8.4126E+00
+
+ cycle    20    k(collision)  0.169611    prompt removal lifetime(abs)  5.3301E-01    source points generated  76407
+                                          source_entropy =     8.4048E+00
+
+ cycle    21    k(collision)  0.168559    prompt removal lifetime(abs)  5.3603E-01    source points generated  74624
+                                          source_entropy =     8.4077E+00
+
+ cycle    22    k(collision)  0.166946    prompt removal lifetime(abs)  5.3622E-01    source points generated  74119
+                                          source_entropy =     8.4060E+00
+
+ cycle    23    k(collision)  0.167920    prompt removal lifetime(abs)  5.3588E-01    source points generated  75590
+                                          source_entropy =     8.4026E+00
+
+ cycle    24    k(collision)  0.164009    prompt removal lifetime(abs)  5.3900E-01    source points generated  73380
+                                          source_entropy =     8.3952E+00
+
+ cycle    25    k(collision)  0.167805    prompt removal lifetime(abs)  5.3600E-01    source points generated  76804
+                                          source_entropy =     8.3902E+00
+
+ cycle    26    k(collision)  0.168617    prompt removal lifetime(abs)  5.3670E-01    source points generated  75403
+                                          source_entropy =     8.3945E+00
+
+ cycle    27    k(collision)  0.168604    prompt removal lifetime(abs)  5.3415E-01    source points generated  74994
+                                          source_entropy =     8.4019E+00
+
+ cycle    28    k(collision)  0.168140    prompt removal lifetime(abs)  5.3661E-01    source points generated  74781
+                                          source_entropy =     8.4086E+00
+
+ cycle    29    k(collision)  0.167673    prompt removal lifetime(abs)  5.3418E-01    source points generated  74752
+                                          source_entropy =     8.4043E+00
+
+ cycle    30    k(collision)  0.166951    prompt removal lifetime(abs)  5.3569E-01    source points generated  74557
+                                          source_entropy =     8.4017E+00
+
+ cycle    31    k(collision)  0.166608    prompt removal lifetime(abs)  5.3356E-01    source points generated  74775
+                                          source_entropy =     8.4057E+00
+
+ cycle    32    k(collision)  0.168372    prompt removal lifetime(abs)  5.3447E-01    source points generated  75749
+                                          source_entropy =     8.4127E+00
+
+ cycle    33    k(collision)  0.167139    prompt removal lifetime(abs)  5.3320E-01    source points generated  74366
+                                          source_entropy =     8.4034E+00
+
+ cycle    34    k(collision)  0.169180    prompt removal lifetime(abs)  5.3354E-01    source points generated  75803
+                                          source_entropy =     8.4033E+00
+
+ cycle    35    k(collision)  0.166232    prompt removal lifetime(abs)  5.3670E-01    source points generated  73623
+                                          source_entropy =     8.4090E+00
+
+ cycle    36    k(collision)  0.166629    prompt removal lifetime(abs)  5.3755E-01    source points generated  75350
+                                          source_entropy =     8.4056E+00
+
+ cycle    37    k(collision)  0.166963    prompt removal lifetime(abs)  5.3630E-01    source points generated  75137
+                                          source_entropy =     8.4059E+00
+
+ cycle    38    k(collision)  0.169956    prompt removal lifetime(abs)  5.3441E-01    source points generated  76152
+                                          source_entropy =     8.4102E+00
+
+ cycle    39    k(collision)  0.167881    prompt removal lifetime(abs)  5.3298E-01    source points generated  74117
+                                          source_entropy =     8.4076E+00
+
+ cycle    40    k(collision)  0.168492    prompt removal lifetime(abs)  5.3608E-01    source points generated  75235
+                                          source_entropy =     8.3972E+00
+
+ cycle    41    k(collision)  0.166758    prompt removal lifetime(abs)  5.3641E-01    source points generated  74241
+                                          source_entropy =     8.4064E+00
+
+ cycle    42    k(collision)  0.166484    prompt removal lifetime(abs)  5.3470E-01    source points generated  74817
+                                          source_entropy =     8.4126E+00
+
+ cycle    43    k(collision)  0.167309    prompt removal lifetime(abs)  5.3186E-01    source points generated  75360
+                                          source_entropy =     8.4024E+00
+
+ cycle    44    k(collision)  0.167637    prompt removal lifetime(abs)  5.3424E-01    source points generated  75107
+                                          source_entropy =     8.4055E+00
+
+ cycle    45    k(collision)  0.168227    prompt removal lifetime(abs)  5.3451E-01    source points generated  75292
+                                          source_entropy =     8.4033E+00
+
+ cycle    46    k(collision)  0.169362    prompt removal lifetime(abs)  5.3238E-01    source points generated  75513
+                                          source_entropy =     8.3985E+00
+
+ cycle    47    k(collision)  0.170286    prompt removal lifetime(abs)  5.3554E-01    source points generated  75420
+                                          source_entropy =     8.4083E+00
+
+ cycle    48    k(collision)  0.167111    prompt removal lifetime(abs)  5.3433E-01    source points generated  73679
+                                          source_entropy =     8.4125E+00
+
+ cycle    49    k(collision)  0.166871    prompt removal lifetime(abs)  5.3414E-01    source points generated  75005
+                                          source_entropy =     8.3988E+00
+
+ cycle    50    k(collision)  0.167695    prompt removal lifetime(abs)  5.3663E-01    source points generated  75349
+                                          source_entropy =     8.3997E+00
+
+ cycle    51    k(collision)  0.166833    prompt removal lifetime(abs)  5.3428E-01    source points generated  74631
+                                          source_entropy =     8.4002E+00
+
+  estimator     cycle    52   ave of     2 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167098       0.166965 0.0008     k(col/abs)          0.000000 0.0000     0.000000 0.0000   0.0000
+ k(absorption)     0.167098       0.166965 0.0008     k(abs/tk ln)        0.000000 0.0000     0.000000 0.0000   0.0000
+ k(trk length)     0.167853       0.168042 0.0011     k(tk ln/col)        0.000000 0.0000     0.000000 0.0000   0.0000
+ rem life(col)   5.3572E-01     5.3500E-01 0.0013
+ rem life(abs)   5.3572E-01     5.3500E-01 0.0013     life(col/abs)     0.0000E+00 0.0000   0.0000E+00 0.0000   0.0000
+ source points generated  75227                source_entropy  8.4095E+00
+
+  estimator     cycle    53   ave of     3 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168026       0.167319 0.0022     k(col/abs)          0.167319 0.0022     0.167319 0.0022   1.0000
+ k(absorption)     0.168026       0.167319 0.0022     k(abs/tk ln)        0.167550 0.0003     0.167579 0.0003  -0.9833
+ k(trk length)     0.167261       0.167781 0.0017     k(tk ln/col)        0.167550 0.0003     0.167579 0.0003  -0.9833
+ rem life(col)   5.3513E-01     5.3505E-01 0.0008
+ rem life(abs)   5.3513E-01     5.3505E-01 0.0008     life(col/abs)     5.3505E-01 0.0008   5.3505E-01 0.0008   1.0000
+ source points generated  75476                source_entropy  8.4053E+00
+
+  estimator     cycle    54   ave of     4 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166117       0.167019 0.0024     k(col/abs)          0.167019 0.0024     0.167019 0.0024   1.0000
+ k(absorption)     0.166117       0.167019 0.0024     k(abs/tk ln)        0.167406 0.0009     0.167554 0.0010  -0.6839
+ k(trk length)     0.167831       0.167794 0.0012     k(tk ln/col)        0.167406 0.0009     0.167554 0.0010  -0.6839
+ rem life(col)   5.3527E-01     5.3510E-01 0.0006     k(col/abs/tk ln)    0.167277 0.0013     0.167554 0.0010
+ rem life(abs)   5.3527E-01     5.3510E-01 0.0006     life(col/abs/tl)  5.3540E-01 0.0005   5.3615E-01 0.0020
+ source points generated  74083                source_entropy  8.4009E+00
+
+  estimator     cycle    55   ave of     5 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167439       0.167103 0.0019     k(col/abs)          0.167103 0.0019     0.167103 0.0019   1.0000
+ k(absorption)     0.167439       0.167103 0.0019     k(abs/tk ln)        0.167453 0.0007     0.167596 0.0008  -0.6420
+ k(trk length)     0.167841       0.167803 0.0009     k(tk ln/col)        0.167453 0.0007     0.167596 0.0008  -0.6420
+ rem life(col)   5.3556E-01     5.3519E-01 0.0005     k(col/abs/tk ln)    0.167336 0.0011     0.167596 0.0008
+ rem life(abs)   5.3556E-01     5.3519E-01 0.0005     life(col/abs/tl)  5.3547E-01 0.0004   5.3623E-01 0.0013
+ source points generated  75622                source_entropy  8.4085E+00
+
+  estimator     cycle    56   ave of     6 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167331       0.167141 0.0016     k(col/abs)          0.167141 0.0016     0.167141 0.0016   1.0000
+ k(absorption)     0.167331       0.167141 0.0016     k(abs/tk ln)        0.167496 0.0007     0.167638 0.0008  -0.5444
+ k(trk length)     0.168086       0.167851 0.0008     k(tk ln/col)        0.167496 0.0007     0.167638 0.0008  -0.5444
+ rem life(col)   5.3139E-01     5.3456E-01 0.0012     k(col/abs/tk ln)    0.167377 0.0009     0.167638 0.0008
+ rem life(abs)   5.3139E-01     5.3456E-01 0.0012     life(col/abs/tl)  5.3487E-01 0.0012   5.3790E-01 0.0027
+ source points generated  74960                source_entropy  8.4090E+00
+
+  estimator     cycle    57   ave of     7 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167947       0.167256 0.0015     k(col/abs)          0.167256 0.0015     0.167256 0.0015   1.0000
+ k(absorption)     0.167947       0.167256 0.0015     k(abs/tk ln)        0.167571 0.0007     0.167728 0.0008  -0.3249
+ k(trk length)     0.168098       0.167886 0.0007     k(tk ln/col)        0.167571 0.0007     0.167728 0.0008  -0.3249
+ rem life(col)   5.3624E-01     5.3480E-01 0.0011     k(col/abs/tk ln)    0.167466 0.0009     0.167728 0.0008
+ rem life(abs)   5.3624E-01     5.3480E-01 0.0011     life(col/abs/tl)  5.3510E-01 0.0011   5.3819E-01 0.0022
+ source points generated  75221                source_entropy  8.4024E+00
+
+  estimator     cycle    58   ave of     8 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167489       0.167285 0.0013     k(col/abs)          0.167285 0.0013     0.167285 0.0013   1.0000
+ k(absorption)     0.167489       0.167285 0.0013     k(abs/tk ln)        0.167575 0.0006     0.167716 0.0007  -0.3428
+ k(trk length)     0.167710       0.167864 0.0006     k(tk ln/col)        0.167575 0.0006     0.167716 0.0007  -0.3428
+ rem life(col)   5.3530E-01     5.3486E-01 0.0010     k(col/abs/tk ln)    0.167478 0.0008     0.167716 0.0007
+ rem life(abs)   5.3530E-01     5.3486E-01 0.0010     life(col/abs/tl)  5.3513E-01 0.0009   5.3722E-01 0.0019
+ source points generated  74674                source_entropy  8.3994E+00
+
+  estimator     cycle    59   ave of     9 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167843       0.167347 0.0012     k(col/abs)          0.167347 0.0012     0.167347 0.0012   1.0000
+ k(absorption)     0.167843       0.167347 0.0012     k(abs/tk ln)        0.167671 0.0008     0.167748 0.0011   0.0608
+ k(trk length)     0.169042       0.167995 0.0010     k(tk ln/col)        0.167671 0.0008     0.167748 0.0011   0.0608
+ rem life(col)   5.3758E-01     5.3516E-01 0.0010     k(col/abs/tk ln)    0.167563 0.0009     0.167748 0.0011
+ rem life(abs)   5.3758E-01     5.3516E-01 0.0010     life(col/abs/tl)  5.3539E-01 0.0010   5.3697E-01 0.0011
+ source points generated  75203                source_entropy  8.3921E+00
+
+  estimator     cycle    60   ave of    10 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168399       0.167452 0.0012     k(col/abs)          0.167452 0.0012     0.167452 0.0012   1.0000
+ k(absorption)     0.168399       0.167452 0.0012     k(abs/tk ln)        0.167760 0.0009     0.167866 0.0012   0.2748
+ k(trk length)     0.168725       0.168068 0.0010     k(tk ln/col)        0.167760 0.0009     0.167866 0.0012   0.2748
+ rem life(col)   5.3393E-01     5.3504E-01 0.0010     k(col/abs/tk ln)    0.167657 0.0010     0.167866 0.0012
+ rem life(abs)   5.3393E-01     5.3504E-01 0.0010     life(col/abs/tl)  5.3527E-01 0.0009   5.3686E-01 0.0011
+ source points generated  75179                source_entropy  8.4084E+00
+
+  estimator     cycle    61   ave of    11 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167319       0.167440 0.0011     k(col/abs)          0.167440 0.0011     0.167440 0.0011   1.0000
+ k(absorption)     0.167319       0.167440 0.0011     k(abs/tk ln)        0.167754 0.0008     0.167863 0.0011   0.2745
+ k(trk length)     0.168061       0.168067 0.0009     k(tk ln/col)        0.167754 0.0008     0.167863 0.0011   0.2745
+ rem life(col)   5.3591E-01     5.3512E-01 0.0009     k(col/abs/tk ln)    0.167649 0.0009     0.167863 0.0011
+ rem life(abs)   5.3591E-01     5.3512E-01 0.0009     life(col/abs/tl)  5.3537E-01 0.0008   5.3672E-01 0.0013
+ source points generated  74467                source_entropy  8.4009E+00
+
+  estimator     cycle    62   ave of    12 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167813       0.167471 0.0010     k(col/abs)          0.167471 0.0010     0.167471 0.0010   1.0000
+ k(absorption)     0.167813       0.167471 0.0010     k(abs/tk ln)        0.167750 0.0007     0.167832 0.0010   0.2109
+ k(trk length)     0.167610       0.168029 0.0008     k(tk ln/col)        0.167750 0.0007     0.167832 0.0010   0.2109
+ rem life(col)   5.3570E-01     5.3517E-01 0.0008     k(col/abs/tk ln)    0.167657 0.0008     0.167832 0.0010
+ rem life(abs)   5.3570E-01     5.3517E-01 0.0008     life(col/abs/tl)  5.3541E-01 0.0008   5.3668E-01 0.0011
+ source points generated  75170                source_entropy  8.4060E+00
+
+  estimator     cycle    63   ave of    13 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167563       0.167478 0.0010     k(col/abs)          0.167478 0.0010     0.167478 0.0010   1.0000
+ k(absorption)     0.167563       0.167478 0.0010     k(abs/tk ln)        0.167771 0.0007     0.167845 0.0009   0.2149
+ k(trk length)     0.168467       0.168063 0.0008     k(tk ln/col)        0.167771 0.0007     0.167845 0.0009   0.2149
+ rem life(col)   5.3625E-01     5.3525E-01 0.0008     k(col/abs/tk ln)    0.167673 0.0007     0.167845 0.0009
+ rem life(abs)   5.3625E-01     5.3525E-01 0.0008     life(col/abs/tl)  5.3547E-01 0.0007   5.3667E-01 0.0010
+ source points generated  74878                source_entropy  8.4105E+00
+
+  estimator     cycle    64   ave of    14 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167380       0.167471 0.0009     k(col/abs)          0.167471 0.0009     0.167471 0.0009   1.0000
+ k(absorption)     0.167380       0.167471 0.0009     k(abs/tk ln)        0.167769 0.0006     0.167845 0.0009   0.2131
+ k(trk length)     0.168116       0.168067 0.0007     k(tk ln/col)        0.167769 0.0006     0.167845 0.0009   0.2131
+ rem life(col)   5.3509E-01     5.3524E-01 0.0007     k(col/abs/tk ln)    0.167670 0.0007     0.167845 0.0009
+ rem life(abs)   5.3509E-01     5.3524E-01 0.0007     life(col/abs/tl)  5.3544E-01 0.0007   5.3629E-01 0.0009
+ source points generated  74857                source_entropy  8.4031E+00
+
+  estimator     cycle    65   ave of    15 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167456       0.167470 0.0008     k(col/abs)          0.167470 0.0008     0.167470 0.0008   1.0000
+ k(absorption)     0.167456       0.167470 0.0008     k(abs/tk ln)        0.167749 0.0006     0.167801 0.0008   0.2040
+ k(trk length)     0.167484       0.168028 0.0007     k(tk ln/col)        0.167749 0.0006     0.167801 0.0008   0.2040
+ rem life(col)   5.3517E-01     5.3524E-01 0.0007     k(col/abs/tk ln)    0.167656 0.0006     0.167801 0.0008
+ rem life(abs)   5.3517E-01     5.3524E-01 0.0007     life(col/abs/tl)  5.3543E-01 0.0006   5.3623E-01 0.0009
+ source points generated  75044                source_entropy  8.4022E+00
+
+  estimator     cycle    66   ave of    16 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167339       0.167462 0.0008     k(col/abs)          0.167462 0.0008     0.167462 0.0008   1.0000
+ k(absorption)     0.167339       0.167462 0.0008     k(abs/tk ln)        0.167744 0.0006     0.167797 0.0008   0.2050
+ k(trk length)     0.167986       0.168025 0.0007     k(tk ln/col)        0.167744 0.0006     0.167797 0.0008   0.2050
+ rem life(col)   5.3567E-01     5.3526E-01 0.0006     k(col/abs/tk ln)    0.167650 0.0006     0.167797 0.0008
+ rem life(abs)   5.3567E-01     5.3526E-01 0.0006     life(col/abs/tl)  5.3547E-01 0.0006   5.3623E-01 0.0008
+ source points generated  74903                source_entropy  8.3953E+00
+
+  estimator     cycle    67   ave of    17 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168940       0.167549 0.0009     k(col/abs)          0.167549 0.0009     0.167549 0.0009   1.0000
+ k(absorption)     0.168940       0.167549 0.0009     k(abs/tk ln)        0.167787 0.0006     0.167884 0.0007   0.1683
+ k(trk length)     0.168028       0.168025 0.0006     k(tk ln/col)        0.167787 0.0006     0.167884 0.0007   0.1683
+ rem life(col)   5.3529E-01     5.3526E-01 0.0006     k(col/abs/tk ln)    0.167708 0.0007     0.167884 0.0007
+ rem life(abs)   5.3529E-01     5.3526E-01 0.0006     life(col/abs/tl)  5.3546E-01 0.0005   5.3616E-01 0.0008
+ source points generated  75700                source_entropy  8.3974E+00
+
+  estimator     cycle    68   ave of    18 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169188       0.167640 0.0010     k(col/abs)          0.167640 0.0010     0.167640 0.0010   1.0000
+ k(absorption)     0.169188       0.167640 0.0010     k(abs/tk ln)        0.167836 0.0006     0.167947 0.0006   0.1744
+ k(trk length)     0.168135       0.168031 0.0006     k(tk ln/col)        0.167836 0.0006     0.167947 0.0006   0.1744
+ rem life(col)   5.3605E-01     5.3531E-01 0.0006     k(col/abs/tk ln)    0.167770 0.0007     0.167947 0.0006
+ rem life(abs)   5.3605E-01     5.3531E-01 0.0006     life(col/abs/tl)  5.3550E-01 0.0005   5.3616E-01 0.0007
+ source points generated  75089                source_entropy  8.4047E+00
+
+  estimator     cycle    69   ave of    19 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168505       0.167686 0.0010     k(col/abs)          0.167686 0.0010     0.167686 0.0010   1.0000
+ k(absorption)     0.168505       0.167686 0.0010     k(abs/tk ln)        0.167861 0.0006     0.167966 0.0006   0.1802
+ k(trk length)     0.168114       0.168036 0.0006     k(tk ln/col)        0.167861 0.0006     0.167966 0.0006   0.1802
+ rem life(col)   5.3470E-01     5.3528E-01 0.0005     k(col/abs/tk ln)    0.167802 0.0007     0.167966 0.0006
+ rem life(abs)   5.3470E-01     5.3528E-01 0.0005     life(col/abs/tl)  5.3547E-01 0.0005   5.3616E-01 0.0007
+ source points generated  74732                source_entropy  8.4034E+00
+
+  estimator     cycle    70   ave of    20 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169034       0.167753 0.0010     k(col/abs)          0.167753 0.0010     0.167753 0.0010   1.0000
+ k(absorption)     0.169034       0.167753 0.0010     k(abs/tk ln)        0.167891 0.0006     0.167979 0.0005   0.1354
+ k(trk length)     0.167900       0.168029 0.0005     k(tk ln/col)        0.167891 0.0006     0.167979 0.0005   0.1354
+ rem life(col)   5.3714E-01     5.3537E-01 0.0005     k(col/abs/tk ln)    0.167845 0.0007     0.167979 0.0005
+ rem life(abs)   5.3714E-01     5.3537E-01 0.0005     life(col/abs/tl)  5.3556E-01 0.0005   5.3627E-01 0.0007
+ source points generated  75213                source_entropy  8.3979E+00
+
+  estimator     cycle    71   ave of    21 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168020       0.167766 0.0010     k(col/abs)          0.167766 0.0010     0.167766 0.0010   1.0000
+ k(absorption)     0.168020       0.167766 0.0010     k(abs/tk ln)        0.167902 0.0006     0.167989 0.0005   0.1421
+ k(trk length)     0.168210       0.168038 0.0005     k(tk ln/col)        0.167902 0.0006     0.167989 0.0005   0.1421
+ rem life(col)   5.3288E-01     5.3525E-01 0.0005     k(col/abs/tk ln)    0.167856 0.0007     0.167989 0.0005
+ rem life(abs)   5.3288E-01     5.3525E-01 0.0005     life(col/abs/tl)  5.3545E-01 0.0005   5.3626E-01 0.0008
+ source points generated  74537                source_entropy  8.4049E+00
+
+  estimator     cycle    72   ave of    22 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167597       0.167758 0.0009     k(col/abs)          0.167758 0.0009     0.167758 0.0009   1.0000
+ k(absorption)     0.167597       0.167758 0.0009     k(abs/tk ln)        0.167898 0.0006     0.167988 0.0005   0.1416
+ k(trk length)     0.168050       0.168038 0.0005     k(tk ln/col)        0.167898 0.0006     0.167988 0.0005   0.1416
+ rem life(col)   5.3473E-01     5.3523E-01 0.0005     k(col/abs/tk ln)    0.167851 0.0007     0.167988 0.0005
+ rem life(abs)   5.3473E-01     5.3523E-01 0.0005     life(col/abs/tl)  5.3543E-01 0.0005   5.3626E-01 0.0007
+ source points generated  74707                source_entropy  8.3978E+00
+
+  estimator     cycle    73   ave of    23 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168920       0.167809 0.0009     k(col/abs)          0.167809 0.0009     0.167809 0.0009   1.0000
+ k(absorption)     0.168920       0.167809 0.0009     k(abs/tk ln)        0.167921 0.0005     0.167995 0.0005   0.1142
+ k(trk length)     0.167928       0.168033 0.0005     k(tk ln/col)        0.167921 0.0005     0.167995 0.0005   0.1142
+ rem life(col)   5.3617E-01     5.3527E-01 0.0005     k(col/abs/tk ln)    0.167883 0.0007     0.167995 0.0005
+ rem life(abs)   5.3617E-01     5.3527E-01 0.0005     life(col/abs/tl)  5.3547E-01 0.0005   5.3630E-01 0.0007
+ source points generated  75481                source_entropy  8.4077E+00
+
+  estimator     cycle    74   ave of    24 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166326       0.167747 0.0010     k(col/abs)          0.167747 0.0010     0.167747 0.0010   1.0000
+ k(absorption)     0.166326       0.167747 0.0010     k(abs/tk ln)        0.167885 0.0006     0.167987 0.0005   0.1511
+ k(trk length)     0.167812       0.168024 0.0005     k(tk ln/col)        0.167885 0.0006     0.167987 0.0005   0.1511
+ rem life(col)   5.3436E-01     5.3523E-01 0.0005     k(col/abs/tk ln)    0.167839 0.0007     0.167987 0.0005
+ rem life(abs)   5.3436E-01     5.3523E-01 0.0005     life(col/abs/tl)  5.3545E-01 0.0005   5.3622E-01 0.0007
+ source points generated  73770                source_entropy  8.4059E+00
+
+  estimator     cycle    75   ave of    25 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167336       0.167730 0.0009     k(col/abs)          0.167730 0.0009     0.167730 0.0009   1.0000
+ k(absorption)     0.167336       0.167730 0.0009     k(abs/tk ln)        0.167869 0.0006     0.167971 0.0005   0.1690
+ k(trk length)     0.167632       0.168008 0.0004     k(tk ln/col)        0.167869 0.0006     0.167971 0.0005   0.1690
+ rem life(col)   5.3553E-01     5.3524E-01 0.0005     k(col/abs/tk ln)    0.167823 0.0007     0.167971 0.0005
+ rem life(abs)   5.3553E-01     5.3524E-01 0.0005     life(col/abs/tl)  5.3546E-01 0.0004   5.3624E-01 0.0007
+ source points generated  75482                source_entropy  8.4049E+00
+
+  estimator     cycle    76   ave of    26 cycles      combination         simple average    combined average     corr
+ k(collision)      0.165840       0.167658 0.0010     k(col/abs)          0.167658 0.0010     0.167658 0.0010   1.0000
+ k(absorption)     0.165840       0.167658 0.0010     k(abs/tk ln)        0.167815 0.0006     0.167949 0.0005   0.3296
+ k(trk length)     0.167087       0.167973 0.0005     k(tk ln/col)        0.167815 0.0006     0.167949 0.0005   0.3296
+ rem life(col)   5.3430E-01     5.3521E-01 0.0005     k(col/abs/tk ln)    0.167763 0.0007     0.167949 0.0005
+ rem life(abs)   5.3430E-01     5.3521E-01 0.0005     life(col/abs/tl)  5.3542E-01 0.0004   5.3606E-01 0.0007
+ source points generated  74374                source_entropy  8.4004E+00
+
+  estimator     cycle    77   ave of    27 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168135       0.167675 0.0010     k(col/abs)          0.167675 0.0010     0.167675 0.0010   1.0000
+ k(absorption)     0.168135       0.167675 0.0010     k(abs/tk ln)        0.167816 0.0006     0.167931 0.0005   0.2988
+ k(trk length)     0.167546       0.167957 0.0005     k(tk ln/col)        0.167816 0.0006     0.167931 0.0005   0.2988
+ rem life(col)   5.3509E-01     5.3520E-01 0.0004     k(col/abs/tk ln)    0.167769 0.0007     0.167931 0.0005
+ rem life(abs)   5.3509E-01     5.3520E-01 0.0004     life(col/abs/tl)  5.3542E-01 0.0004   5.3607E-01 0.0007
+ source points generated  76058                source_entropy  8.4075E+00
+
+  estimator     cycle    78   ave of    28 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168692       0.167712 0.0010     k(col/abs)          0.167712 0.0010     0.167712 0.0010   1.0000
+ k(absorption)     0.168692       0.167712 0.0010     k(abs/tk ln)        0.167830 0.0006     0.167924 0.0005   0.2629
+ k(trk length)     0.167712       0.167948 0.0005     k(tk ln/col)        0.167830 0.0006     0.167924 0.0005   0.2629
+ rem life(col)   5.3256E-01     5.3511E-01 0.0005     k(col/abs/tk ln)    0.167791 0.0007     0.167924 0.0005
+ rem life(abs)   5.3256E-01     5.3511E-01 0.0005     life(col/abs/tl)  5.3533E-01 0.0004   5.3611E-01 0.0007
+ source points generated  75071                source_entropy  8.4016E+00
+
+  estimator     cycle    79   ave of    29 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167119       0.167691 0.0009     k(col/abs)          0.167691 0.0009     0.167691 0.0009   1.0000
+ k(absorption)     0.167119       0.167691 0.0009     k(abs/tk ln)        0.167814 0.0006     0.167913 0.0005   0.2780
+ k(trk length)     0.167612       0.167937 0.0004     k(tk ln/col)        0.167814 0.0006     0.167913 0.0005   0.2780
+ rem life(col)   5.3494E-01     5.3510E-01 0.0004     k(col/abs/tk ln)    0.167773 0.0007     0.167913 0.0005
+ rem life(abs)   5.3494E-01     5.3510E-01 0.0004     life(col/abs/tl)  5.3532E-01 0.0004   5.3600E-01 0.0007
+ source points generated  74366                source_entropy  8.4137E+00
+
+  estimator     cycle    80   ave of    30 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167371       0.167681 0.0009     k(col/abs)          0.167681 0.0009     0.167681 0.0009   1.0000
+ k(absorption)     0.167371       0.167681 0.0009     k(abs/tk ln)        0.167799 0.0006     0.167893 0.0005   0.2861
+ k(trk length)     0.167364       0.167918 0.0004     k(tk ln/col)        0.167799 0.0006     0.167893 0.0005   0.2861
+ rem life(col)   5.3624E-01     5.3514E-01 0.0004     k(col/abs/tk ln)    0.167760 0.0007     0.167893 0.0005
+ rem life(abs)   5.3624E-01     5.3514E-01 0.0004     life(col/abs/tl)  5.3535E-01 0.0004   5.3605E-01 0.0006
+ source points generated  75135                source_entropy  8.4058E+00
+
+  estimator     cycle    81   ave of    31 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166987       0.167658 0.0009     k(col/abs)          0.167658 0.0009     0.167658 0.0009   1.0000
+ k(absorption)     0.166987       0.167658 0.0009     k(abs/tk ln)        0.167786 0.0005     0.167888 0.0004   0.2906
+ k(trk length)     0.167796       0.167914 0.0004     k(tk ln/col)        0.167786 0.0005     0.167888 0.0004   0.2906
+ rem life(col)   5.3387E-01     5.3510E-01 0.0004     k(col/abs/tk ln)    0.167743 0.0006     0.167888 0.0004
+ rem life(abs)   5.3387E-01     5.3510E-01 0.0004     life(col/abs/tl)  5.3532E-01 0.0004   5.3604E-01 0.0006
+ source points generated  74763                source_entropy  8.4028E+00
+
+  estimator     cycle    82   ave of    32 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168678       0.167690 0.0009     k(col/abs)          0.167690 0.0009     0.167690 0.0009   1.0000
+ k(absorption)     0.168678       0.167690 0.0009     k(abs/tk ln)        0.167805 0.0005     0.167901 0.0004   0.3039
+ k(trk length)     0.168137       0.167921 0.0004     k(tk ln/col)        0.167805 0.0005     0.167901 0.0004   0.3039
+ rem life(col)   5.3608E-01     5.3513E-01 0.0004     k(col/abs/tk ln)    0.167767 0.0006     0.167901 0.0004
+ rem life(abs)   5.3608E-01     5.3513E-01 0.0004     life(col/abs/tl)  5.3534E-01 0.0004   5.3605E-01 0.0006
+ source points generated  75701                source_entropy  8.4032E+00
+
+  estimator     cycle    83   ave of    33 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168308       0.167709 0.0009     k(col/abs)          0.167709 0.0009     0.167709 0.0009   1.0000
+ k(absorption)     0.168308       0.167709 0.0009     k(abs/tk ln)        0.167813 0.0005     0.167898 0.0004   0.2930
+ k(trk length)     0.167787       0.167917 0.0004     k(tk ln/col)        0.167813 0.0005     0.167898 0.0004   0.2930
+ rem life(col)   5.3365E-01     5.3508E-01 0.0004     k(col/abs/tk ln)    0.167778 0.0006     0.167898 0.0004
+ rem life(abs)   5.3365E-01     5.3508E-01 0.0004     life(col/abs/tl)  5.3530E-01 0.0004   5.3606E-01 0.0006
+ source points generated  74800                source_entropy  8.4093E+00
+
+  estimator     cycle    84   ave of    34 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166149       0.167663 0.0009     k(col/abs)          0.167663 0.0009     0.167663 0.0009   1.0000
+ k(absorption)     0.166149       0.167663 0.0009     k(abs/tk ln)        0.167787 0.0005     0.167894 0.0004   0.3006
+ k(trk length)     0.167751       0.167912 0.0004     k(tk ln/col)        0.167787 0.0005     0.167894 0.0004   0.3006
+ rem life(col)   5.3547E-01     5.3510E-01 0.0004     k(col/abs/tk ln)    0.167746 0.0006     0.167894 0.0004
+ rem life(abs)   5.3547E-01     5.3510E-01 0.0004     life(col/abs/tl)  5.3532E-01 0.0004   5.3605E-01 0.0006
+ source points generated  73919                source_entropy  8.3996E+00
+
+  estimator     cycle    85   ave of    35 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168589       0.167689 0.0009     k(col/abs)          0.167689 0.0009     0.167689 0.0009   1.0000
+ k(absorption)     0.168589       0.167689 0.0009     k(abs/tk ln)        0.167791 0.0005     0.167871 0.0004   0.2315
+ k(trk length)     0.167248       0.167893 0.0004     k(tk ln/col)        0.167791 0.0005     0.167871 0.0004   0.2315
+ rem life(col)   5.3701E-01     5.3515E-01 0.0004     k(col/abs/tk ln)    0.167757 0.0006     0.167871 0.0004
+ rem life(abs)   5.3701E-01     5.3515E-01 0.0004     life(col/abs/tl)  5.3537E-01 0.0004   5.3613E-01 0.0006
+ source points generated  76024                source_entropy  8.4033E+00
+
+  estimator     cycle    86   ave of    36 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168989       0.167725 0.0009     k(col/abs)          0.167725 0.0009     0.167725 0.0009   1.0000
+ k(absorption)     0.168989       0.167725 0.0009     k(abs/tk ln)        0.167813 0.0005     0.167885 0.0004   0.2521
+ k(trk length)     0.168172       0.167901 0.0004     k(tk ln/col)        0.167813 0.0005     0.167885 0.0004   0.2521
+ rem life(col)   5.3569E-01     5.3516E-01 0.0004     k(col/abs/tk ln)    0.167784 0.0006     0.167885 0.0004
+ rem life(abs)   5.3569E-01     5.3516E-01 0.0004     life(col/abs/tl)  5.3538E-01 0.0004   5.3615E-01 0.0006
+ source points generated  75138                source_entropy  8.4000E+00
+
+  estimator     cycle    87   ave of    37 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168387       0.167743 0.0008     k(col/abs)          0.167743 0.0008     0.167743 0.0008   1.0000
+ k(absorption)     0.168387       0.167743 0.0008     k(abs/tk ln)        0.167826 0.0005     0.167894 0.0004   0.2639
+ k(trk length)     0.168198       0.167909 0.0004     k(tk ln/col)        0.167826 0.0005     0.167894 0.0004   0.2639
+ rem life(col)   5.3391E-01     5.3513E-01 0.0004     k(col/abs/tk ln)    0.167798 0.0006     0.167894 0.0004
+ rem life(abs)   5.3391E-01     5.3513E-01 0.0004     life(col/abs/tl)  5.3537E-01 0.0004   5.3604E-01 0.0005
+ source points generated  74774                source_entropy  8.4045E+00
+
+  estimator     cycle    88   ave of    38 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168276       0.167757 0.0008     k(col/abs)          0.167757 0.0008     0.167757 0.0008   1.0000
+ k(absorption)     0.168276       0.167757 0.0008     k(abs/tk ln)        0.167831 0.0005     0.167892 0.0004   0.2568
+ k(trk length)     0.167781       0.167905 0.0004     k(tk ln/col)        0.167831 0.0005     0.167892 0.0004   0.2568
+ rem life(col)   5.3605E-01     5.3516E-01 0.0004     k(col/abs/tk ln)    0.167807 0.0006     0.167892 0.0004
+ rem life(abs)   5.3605E-01     5.3516E-01 0.0004     life(col/abs/tl)  5.3539E-01 0.0004   5.3606E-01 0.0005
+ source points generated  74932                source_entropy  8.3953E+00
+
+  estimator     cycle    89   ave of    39 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166602       0.167728 0.0008     k(col/abs)          0.167728 0.0008     0.167728 0.0008   1.0000
+ k(absorption)     0.166602       0.167728 0.0008     k(abs/tk ln)        0.167813 0.0005     0.167885 0.0004   0.2733
+ k(trk length)     0.167636       0.167898 0.0004     k(tk ln/col)        0.167813 0.0005     0.167885 0.0004   0.2733
+ rem life(col)   5.3389E-01     5.3512E-01 0.0004     k(col/abs/tk ln)    0.167785 0.0006     0.167885 0.0004
+ rem life(abs)   5.3389E-01     5.3512E-01 0.0004     life(col/abs/tl)  5.3535E-01 0.0003   5.3600E-01 0.0005
+ source points generated  74430                source_entropy  8.4002E+00
+
+  estimator     cycle    90   ave of    40 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167863       0.167731 0.0008     k(col/abs)          0.167731 0.0008     0.167731 0.0008   1.0000
+ k(absorption)     0.167863       0.167731 0.0008     k(abs/tk ln)        0.167822 0.0005     0.167898 0.0004   0.2707
+ k(trk length)     0.168519       0.167914 0.0004     k(tk ln/col)        0.167822 0.0005     0.167898 0.0004   0.2707
+ rem life(col)   5.3614E-01     5.3515E-01 0.0004     k(col/abs/tk ln)    0.167792 0.0006     0.167898 0.0004
+ rem life(abs)   5.3614E-01     5.3515E-01 0.0004     life(col/abs/tl)  5.3538E-01 0.0003   5.3603E-01 0.0005
+ source points generated  75472                source_entropy  8.4040E+00
+
+  estimator     cycle    91   ave of    41 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167659       0.167729 0.0008     k(col/abs)          0.167729 0.0008     0.167729 0.0008   1.0000
+ k(absorption)     0.167659       0.167729 0.0008     k(abs/tk ln)        0.167829 0.0005     0.167909 0.0004   0.2588
+ k(trk length)     0.168550       0.167929 0.0004     k(tk ln/col)        0.167829 0.0005     0.167909 0.0004   0.2588
+ rem life(col)   5.3516E-01     5.3515E-01 0.0004     k(col/abs/tk ln)    0.167796 0.0006     0.167909 0.0004
+ rem life(abs)   5.3516E-01     5.3515E-01 0.0004     life(col/abs/tl)  5.3538E-01 0.0003   5.3602E-01 0.0005
+ source points generated  74934                source_entropy  8.4054E+00
+
+  estimator     cycle    92   ave of    42 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167418       0.167722 0.0008     k(col/abs)          0.167722 0.0008     0.167722 0.0008   1.0000
+ k(absorption)     0.167418       0.167722 0.0008     k(abs/tk ln)        0.167824 0.0005     0.167906 0.0004   0.2611
+ k(trk length)     0.167793       0.167926 0.0004     k(tk ln/col)        0.167824 0.0005     0.167906 0.0004   0.2611
+ rem life(col)   5.3302E-01     5.3510E-01 0.0004     k(col/abs/tk ln)    0.167790 0.0006     0.167906 0.0004
+ rem life(abs)   5.3302E-01     5.3510E-01 0.0004     life(col/abs/tl)  5.3533E-01 0.0003   5.3600E-01 0.0005
+ source points generated  74930                source_entropy  8.4092E+00
+
+  estimator     cycle    93   ave of    43 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166535       0.167694 0.0008     k(col/abs)          0.167694 0.0008     0.167694 0.0008   1.0000
+ k(absorption)     0.166535       0.167694 0.0008     k(abs/tk ln)        0.167812 0.0005     0.167905 0.0004   0.2450
+ k(trk length)     0.168043       0.167929 0.0004     k(tk ln/col)        0.167812 0.0005     0.167905 0.0004   0.2450
+ rem life(col)   5.3465E-01     5.3509E-01 0.0004     k(col/abs/tk ln)    0.167773 0.0006     0.167905 0.0004
+ rem life(abs)   5.3465E-01     5.3509E-01 0.0004     life(col/abs/tl)  5.3532E-01 0.0003   5.3600E-01 0.0005
+ source points generated  74611                source_entropy  8.4006E+00
+
+  estimator     cycle    94   ave of    44 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168581       0.167714 0.0008     k(col/abs)          0.167714 0.0008     0.167714 0.0008   1.0000
+ k(absorption)     0.168581       0.167714 0.0008     k(abs/tk ln)        0.167817 0.0005     0.167897 0.0004   0.2143
+ k(trk length)     0.167526       0.167920 0.0003     k(tk ln/col)        0.167817 0.0005     0.167897 0.0004   0.2143
+ rem life(col)   5.3588E-01     5.3511E-01 0.0003     k(col/abs/tk ln)    0.167783 0.0005     0.167897 0.0004
+ rem life(abs)   5.3588E-01     5.3511E-01 0.0003     life(col/abs/tl)  5.3534E-01 0.0003   5.3600E-01 0.0005
+ source points generated  75980                source_entropy  8.4001E+00
+
+  estimator     cycle    95   ave of    45 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166005       0.167676 0.0008     k(col/abs)          0.167676 0.0008     0.167676 0.0008   1.0000
+ k(absorption)     0.166005       0.167676 0.0008     k(abs/tk ln)        0.167793 0.0005     0.167888 0.0004   0.2565
+ k(trk length)     0.167421       0.167909 0.0003     k(tk ln/col)        0.167793 0.0005     0.167888 0.0004   0.2565
+ rem life(col)   5.3662E-01     5.3514E-01 0.0003     k(col/abs/tk ln)    0.167754 0.0006     0.167888 0.0004
+ rem life(abs)   5.3662E-01     5.3514E-01 0.0003     life(col/abs/tl)  5.3537E-01 0.0003   5.3603E-01 0.0005
+ source points generated  73868                source_entropy  8.4047E+00
+
+  estimator     cycle    96   ave of    46 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168431       0.167693 0.0008     k(col/abs)          0.167693 0.0008     0.167693 0.0008   1.0000
+ k(absorption)     0.168431       0.167693 0.0008     k(abs/tk ln)        0.167796 0.0005     0.167878 0.0004   0.2279
+ k(trk length)     0.167437       0.167898 0.0003     k(tk ln/col)        0.167796 0.0005     0.167878 0.0004   0.2279
+ rem life(col)   5.3359E-01     5.3511E-01 0.0003     k(col/abs/tk ln)    0.167761 0.0005     0.167878 0.0004
+ rem life(abs)   5.3359E-01     5.3511E-01 0.0003     life(col/abs/tl)  5.3533E-01 0.0003   5.3593E-01 0.0005
+ source points generated  76090                source_entropy  8.4057E+00
+
+  estimator     cycle    97   ave of    47 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169143       0.167724 0.0008     k(col/abs)          0.167724 0.0008     0.167724 0.0008   1.0000
+ k(absorption)     0.169143       0.167724 0.0008     k(abs/tk ln)        0.167812 0.0005     0.167884 0.0003   0.2308
+ k(trk length)     0.168006       0.167901 0.0003     k(tk ln/col)        0.167812 0.0005     0.167884 0.0003   0.2308
+ rem life(col)   5.3445E-01     5.3509E-01 0.0003     k(col/abs/tk ln)    0.167783 0.0006     0.167884 0.0003
+ rem life(abs)   5.3445E-01     5.3509E-01 0.0003     life(col/abs/tl)  5.3531E-01 0.0003   5.3589E-01 0.0005
+ source points generated  75319                source_entropy  8.4086E+00
+
+  estimator     cycle    98   ave of    48 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166235       0.167693 0.0008     k(col/abs)          0.167693 0.0008     0.167693 0.0008   1.0000
+ k(absorption)     0.166235       0.167693 0.0008     k(abs/tk ln)        0.167789 0.0005     0.167871 0.0004   0.2786
+ k(trk length)     0.167174       0.167886 0.0003     k(tk ln/col)        0.167789 0.0005     0.167871 0.0004   0.2786
+ rem life(col)   5.3525E-01     5.3509E-01 0.0003     k(col/abs/tk ln)    0.167757 0.0006     0.167871 0.0004
+ rem life(abs)   5.3525E-01     5.3509E-01 0.0003     life(col/abs/tl)  5.3532E-01 0.0003   5.3590E-01 0.0005
+ source points generated  73840                source_entropy  8.4111E+00
+
+  estimator     cycle    99   ave of    49 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168956       0.167719 0.0008     k(col/abs)          0.167719 0.0008     0.167719 0.0008   1.0000
+ k(absorption)     0.168956       0.167719 0.0008     k(abs/tk ln)        0.167802 0.0005     0.167873 0.0003   0.2731
+ k(trk length)     0.167886       0.167886 0.0003     k(tk ln/col)        0.167802 0.0005     0.167873 0.0003   0.2731
+ rem life(col)   5.3412E-01     5.3507E-01 0.0003     k(col/abs/tk ln)    0.167774 0.0006     0.167873 0.0003
+ rem life(abs)   5.3412E-01     5.3507E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0003   5.3590E-01 0.0005
+ source points generated  76127                source_entropy  8.4055E+00
+
+  estimator     cycle   100   ave of    50 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167726       0.167719 0.0008     k(col/abs)          0.167719 0.0008     0.167719 0.0008   1.0000
+ k(absorption)     0.167726       0.167719 0.0008     k(abs/tk ln)        0.167805 0.0005     0.167879 0.0003   0.2717
+ k(trk length)     0.168186       0.167892 0.0003     k(tk ln/col)        0.167805 0.0005     0.167879 0.0003   0.2717
+ rem life(col)   5.3250E-01     5.3502E-01 0.0003     k(col/abs/tk ln)    0.167776 0.0005     0.167879 0.0003
+ rem life(abs)   5.3250E-01     5.3502E-01 0.0003     life(col/abs/tl)  5.3526E-01 0.0003   5.3594E-01 0.0005
+ source points generated  74553                source_entropy  8.4030E+00
+
+  estimator     cycle   101   ave of    51 cycles      combination         simple average    combined average     corr
+ k(collision)      0.165149       0.167668 0.0008     k(col/abs)          0.167668 0.0008     0.167668 0.0008   1.0000
+ k(absorption)     0.165149       0.167668 0.0008     k(abs/tk ln)        0.167777 0.0005     0.167875 0.0003   0.2877
+ k(trk length)     0.167615       0.167886 0.0003     k(tk ln/col)        0.167777 0.0005     0.167875 0.0003   0.2877
+ rem life(col)   5.3412E-01     5.3501E-01 0.0003     k(col/abs/tk ln)    0.167741 0.0006     0.167875 0.0003
+ rem life(abs)   5.3412E-01     5.3501E-01 0.0003     life(col/abs/tl)  5.3524E-01 0.0003   5.3594E-01 0.0005
+ source points generated  73829                source_entropy  8.4060E+00
+
+  estimator     cycle   102   ave of    52 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166817       0.167652 0.0008     k(col/abs)          0.167652 0.0008     0.167652 0.0008   1.0000
+ k(absorption)     0.166817       0.167652 0.0008     k(abs/tk ln)        0.167771 0.0005     0.167877 0.0003   0.2774
+ k(trk length)     0.168059       0.167889 0.0003     k(tk ln/col)        0.167771 0.0005     0.167877 0.0003   0.2774
+ rem life(col)   5.3100E-01     5.3493E-01 0.0004     k(col/abs/tk ln)    0.167731 0.0006     0.167877 0.0003
+ rem life(abs)   5.3100E-01     5.3493E-01 0.0004     life(col/abs/tl)  5.3517E-01 0.0003   5.3602E-01 0.0005
+ source points generated  75771                source_entropy  8.4119E+00
+
+  estimator     cycle   103   ave of    53 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166679       0.167634 0.0008     k(col/abs)          0.167634 0.0008     0.167634 0.0008   1.0000
+ k(absorption)     0.166679       0.167634 0.0008     k(abs/tk ln)        0.167761 0.0005     0.167875 0.0003   0.2767
+ k(trk length)     0.167848       0.167889 0.0003     k(tk ln/col)        0.167761 0.0005     0.167875 0.0003   0.2767
+ rem life(col)   5.3547E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167719 0.0006     0.167875 0.0003
+ rem life(abs)   5.3547E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3518E-01 0.0003   5.3601E-01 0.0005
+ source points generated  75000                source_entropy  8.3965E+00
+
+  estimator     cycle   104   ave of    54 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168947       0.167658 0.0008     k(col/abs)          0.167658 0.0008     0.167658 0.0008   1.0000
+ k(absorption)     0.168947       0.167658 0.0008     k(abs/tk ln)        0.167779 0.0005     0.167889 0.0003   0.3044
+ k(trk length)     0.168486       0.167900 0.0003     k(tk ln/col)        0.167779 0.0005     0.167889 0.0003   0.3044
+ rem life(col)   5.3480E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167738 0.0006     0.167889 0.0003
+ rem life(abs)   5.3480E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3518E-01 0.0003   5.3600E-01 0.0004
+ source points generated  76009                source_entropy  8.4078E+00
+
+  estimator     cycle   105   ave of    55 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168261       0.167669 0.0008     k(col/abs)          0.167669 0.0008     0.167669 0.0008   1.0000
+ k(absorption)     0.168261       0.167669 0.0008     k(abs/tk ln)        0.167787 0.0005     0.167896 0.0003   0.3106
+ k(trk length)     0.168206       0.167905 0.0003     k(tk ln/col)        0.167787 0.0005     0.167896 0.0003   0.3106
+ rem life(col)   5.3527E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167748 0.0006     0.167896 0.0003
+ rem life(abs)   5.3527E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3518E-01 0.0003   5.3601E-01 0.0004
+ source points generated  74743                source_entropy  8.4014E+00
+
+  estimator     cycle   106   ave of    56 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168514       0.167684 0.0008     k(col/abs)          0.167684 0.0008     0.167684 0.0008   1.0000
+ k(absorption)     0.168514       0.167684 0.0008     k(abs/tk ln)        0.167796 0.0005     0.167900 0.0003   0.3156
+ k(trk length)     0.168099       0.167909 0.0003     k(tk ln/col)        0.167796 0.0005     0.167900 0.0003   0.3156
+ rem life(col)   5.3413E-01     5.3493E-01 0.0003     k(col/abs/tk ln)    0.167759 0.0006     0.167900 0.0003
+ rem life(abs)   5.3413E-01     5.3493E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3597E-01 0.0004
+ source points generated  75044                source_entropy  8.3957E+00
+
+  estimator     cycle   107   ave of    57 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166715       0.167667 0.0008     k(col/abs)          0.167667 0.0008     0.167667 0.0008   1.0000
+ k(absorption)     0.166715       0.167667 0.0008     k(abs/tk ln)        0.167785 0.0005     0.167896 0.0003   0.3245
+ k(trk length)     0.167623       0.167904 0.0003     k(tk ln/col)        0.167785 0.0005     0.167896 0.0003   0.3245
+ rem life(col)   5.3811E-01     5.3498E-01 0.0003     k(col/abs/tk ln)    0.167746 0.0005     0.167896 0.0003
+ rem life(abs)   5.3811E-01     5.3498E-01 0.0003     life(col/abs/tl)  5.3522E-01 0.0003   5.3604E-01 0.0005
+ source points generated  74196                source_entropy  8.4038E+00
+
+  estimator     cycle   108   ave of    58 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167304       0.167661 0.0007     k(col/abs)          0.167661 0.0007     0.167661 0.0007   1.0000
+ k(absorption)     0.167304       0.167661 0.0007     k(abs/tk ln)        0.167781 0.0004     0.167893 0.0003   0.3265
+ k(trk length)     0.167724       0.167901 0.0003     k(tk ln/col)        0.167781 0.0004     0.167893 0.0003   0.3265
+ rem life(col)   5.3555E-01     5.3499E-01 0.0003     k(col/abs/tk ln)    0.167741 0.0005     0.167893 0.0003
+ rem life(abs)   5.3555E-01     5.3499E-01 0.0003     life(col/abs/tl)  5.3523E-01 0.0003   5.3604E-01 0.0005
+ source points generated  75194                source_entropy  8.3981E+00
+
+  estimator     cycle   109   ave of    59 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168213       0.167670 0.0007     k(col/abs)          0.167670 0.0007     0.167670 0.0007   1.0000
+ k(absorption)     0.168213       0.167670 0.0007     k(abs/tk ln)        0.167791 0.0004     0.167904 0.0003   0.3343
+ k(trk length)     0.168557       0.167912 0.0003     k(tk ln/col)        0.167791 0.0004     0.167904 0.0003   0.3343
+ rem life(col)   5.3448E-01     5.3498E-01 0.0003     k(col/abs/tk ln)    0.167751 0.0005     0.167904 0.0003
+ rem life(abs)   5.3448E-01     5.3498E-01 0.0003     life(col/abs/tl)  5.3522E-01 0.0003   5.3604E-01 0.0005
+ source points generated  75391                source_entropy  8.4050E+00
+
+  estimator     cycle   110   ave of    60 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166526       0.167651 0.0007     k(col/abs)          0.167651 0.0007     0.167651 0.0007   1.0000
+ k(absorption)     0.166526       0.167651 0.0007     k(abs/tk ln)        0.167778 0.0004     0.167899 0.0003   0.3461
+ k(trk length)     0.167560       0.167906 0.0003     k(tk ln/col)        0.167778 0.0004     0.167899 0.0003   0.3461
+ rem life(col)   5.3456E-01     5.3498E-01 0.0003     k(col/abs/tk ln)    0.167736 0.0005     0.167899 0.0003
+ rem life(abs)   5.3456E-01     5.3498E-01 0.0003     life(col/abs/tl)  5.3522E-01 0.0003   5.3604E-01 0.0004
+ source points generated  74395                source_entropy  8.4138E+00
+
+  estimator     cycle   111   ave of    61 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167856       0.167654 0.0007     k(col/abs)          0.167654 0.0007     0.167654 0.0007   1.0000
+ k(absorption)     0.167856       0.167654 0.0007     k(abs/tk ln)        0.167778 0.0004     0.167894 0.0003   0.3423
+ k(trk length)     0.167646       0.167902 0.0003     k(tk ln/col)        0.167778 0.0004     0.167894 0.0003   0.3423
+ rem life(col)   5.3380E-01     5.3496E-01 0.0003     k(col/abs/tk ln)    0.167737 0.0005     0.167894 0.0003
+ rem life(abs)   5.3380E-01     5.3496E-01 0.0003     life(col/abs/tl)  5.3520E-01 0.0003   5.3600E-01 0.0004
+ source points generated  75589                source_entropy  8.4087E+00
+
+  estimator     cycle   112   ave of    62 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167768       0.167656 0.0007     k(col/abs)          0.167656 0.0007     0.167656 0.0007   1.0000
+ k(absorption)     0.167768       0.167656 0.0007     k(abs/tk ln)        0.167776 0.0004     0.167889 0.0003   0.3388
+ k(trk length)     0.167589       0.167897 0.0003     k(tk ln/col)        0.167776 0.0004     0.167889 0.0003   0.3388
+ rem life(col)   5.3473E-01     5.3495E-01 0.0003     k(col/abs/tk ln)    0.167736 0.0005     0.167889 0.0003
+ rem life(abs)   5.3473E-01     5.3495E-01 0.0003     life(col/abs/tl)  5.3519E-01 0.0003   5.3598E-01 0.0004
+ source points generated  75079                source_entropy  8.4062E+00
+
+  estimator     cycle   113   ave of    63 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167654       0.167656 0.0007     k(col/abs)          0.167656 0.0007     0.167656 0.0007   1.0000
+ k(absorption)     0.167654       0.167656 0.0007     k(abs/tk ln)        0.167775 0.0004     0.167887 0.0003   0.3386
+ k(trk length)     0.167775       0.167895 0.0003     k(tk ln/col)        0.167775 0.0004     0.167887 0.0003   0.3386
+ rem life(col)   5.3333E-01     5.3493E-01 0.0003     k(col/abs/tk ln)    0.167736 0.0005     0.167887 0.0003
+ rem life(abs)   5.3333E-01     5.3493E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3598E-01 0.0004
+ source points generated  75133                source_entropy  8.4056E+00
+
+  estimator     cycle   114   ave of    64 cycles      combination         simple average    combined average     corr
+ k(collision)      0.165565       0.167623 0.0007     k(col/abs)          0.167623 0.0007     0.167623 0.0007   1.0000
+ k(absorption)     0.165565       0.167623 0.0007     k(abs/tk ln)        0.167759 0.0004     0.167887 0.0003   0.3226
+ k(trk length)     0.167929       0.167895 0.0003     k(tk ln/col)        0.167759 0.0004     0.167887 0.0003   0.3226
+ rem life(col)   5.3390E-01     5.3491E-01 0.0003     k(col/abs/tk ln)    0.167714 0.0005     0.167887 0.0003
+ rem life(abs)   5.3390E-01     5.3491E-01 0.0003     life(col/abs/tl)  5.3516E-01 0.0003   5.3598E-01 0.0004
+ source points generated  74130                source_entropy  8.4133E+00
+
+  estimator     cycle   115   ave of    65 cycles      combination         simple average    combined average     corr
+ k(collision)      0.164693       0.167578 0.0008     k(col/abs)          0.167578 0.0008     0.167578 0.0008   1.0000
+ k(absorption)     0.164693       0.167578 0.0008     k(abs/tk ln)        0.167727 0.0005     0.167878 0.0003   0.4162
+ k(trk length)     0.166622       0.167876 0.0003     k(tk ln/col)        0.167727 0.0005     0.167878 0.0003   0.4162
+ rem life(col)   5.3276E-01     5.3488E-01 0.0003     k(col/abs/tk ln)    0.167677 0.0006     0.167878 0.0003
+ rem life(abs)   5.3276E-01     5.3488E-01 0.0003     life(col/abs/tl)  5.3512E-01 0.0003   5.3597E-01 0.0004
+ source points generated  74695                source_entropy  8.3892E+00
+
+  estimator     cycle   116   ave of    66 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169076       0.167601 0.0008     k(col/abs)          0.167601 0.0008     0.167601 0.0008   1.0000
+ k(absorption)     0.169076       0.167601 0.0008     k(abs/tk ln)        0.167741 0.0005     0.167886 0.0003   0.4287
+ k(trk length)     0.168290       0.167882 0.0003     k(tk ln/col)        0.167741 0.0005     0.167886 0.0003   0.4287
+ rem life(col)   5.3600E-01     5.3490E-01 0.0003     k(col/abs/tk ln)    0.167695 0.0006     0.167886 0.0003
+ rem life(abs)   5.3600E-01     5.3490E-01 0.0003     life(col/abs/tl)  5.3514E-01 0.0003   5.3599E-01 0.0004
+ source points generated  77084                source_entropy  8.4056E+00
+
+  estimator     cycle   117   ave of    67 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167131       0.167594 0.0007     k(col/abs)          0.167594 0.0007     0.167594 0.0007   1.0000
+ k(absorption)     0.167131       0.167594 0.0007     k(abs/tk ln)        0.167736 0.0005     0.167883 0.0003   0.4311
+ k(trk length)     0.167618       0.167878 0.0003     k(tk ln/col)        0.167736 0.0005     0.167883 0.0003   0.4311
+ rem life(col)   5.3356E-01     5.3488E-01 0.0003     k(col/abs/tk ln)    0.167689 0.0005     0.167883 0.0003
+ rem life(abs)   5.3356E-01     5.3488E-01 0.0003     life(col/abs/tl)  5.3512E-01 0.0003   5.3595E-01 0.0004
+ source points generated  74208                source_entropy  8.3975E+00
+
+  estimator     cycle   118   ave of    68 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167182       0.167588 0.0007     k(col/abs)          0.167588 0.0007     0.167588 0.0007   1.0000
+ k(absorption)     0.167182       0.167588 0.0007     k(abs/tk ln)        0.167731 0.0004     0.167879 0.0003   0.4331
+ k(trk length)     0.167631       0.167874 0.0003     k(tk ln/col)        0.167731 0.0004     0.167879 0.0003   0.4331
+ rem life(col)   5.3898E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167683 0.0005     0.167879 0.0003
+ rem life(abs)   5.3898E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3608E-01 0.0004
+ source points generated  75193                source_entropy  8.4032E+00
+
+  estimator     cycle   119   ave of    69 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167571       0.167588 0.0007     k(col/abs)          0.167588 0.0007     0.167588 0.0007   1.0000
+ k(absorption)     0.167571       0.167588 0.0007     k(abs/tk ln)        0.167734 0.0004     0.167884 0.0003   0.4301
+ k(trk length)     0.168250       0.167880 0.0003     k(tk ln/col)        0.167734 0.0004     0.167884 0.0003   0.4301
+ rem life(col)   5.3554E-01     5.3495E-01 0.0003     k(col/abs/tk ln)    0.167685 0.0005     0.167884 0.0003
+ rem life(abs)   5.3554E-01     5.3495E-01 0.0003     life(col/abs/tl)  5.3518E-01 0.0003   5.3603E-01 0.0004
+ source points generated  75048                source_entropy  8.4036E+00
+
+  estimator     cycle   120   ave of    70 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168446       0.167600 0.0007     k(col/abs)          0.167600 0.0007     0.167600 0.0007   1.0000
+ k(absorption)     0.168446       0.167600 0.0007     k(abs/tk ln)        0.167743 0.0004     0.167891 0.0003   0.4377
+ k(trk length)     0.168329       0.167886 0.0003     k(tk ln/col)        0.167743 0.0004     0.167891 0.0003   0.4377
+ rem life(col)   5.3441E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167695 0.0005     0.167891 0.0003
+ rem life(abs)   5.3441E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3598E-01 0.0004
+ source points generated  75300                source_entropy  8.4006E+00
+
+  estimator     cycle   121   ave of    71 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168870       0.167618 0.0007     k(col/abs)          0.167618 0.0007     0.167618 0.0007   1.0000
+ k(absorption)     0.168870       0.167618 0.0007     k(abs/tk ln)        0.167756 0.0004     0.167901 0.0003   0.4521
+ k(trk length)     0.168481       0.167895 0.0003     k(tk ln/col)        0.167756 0.0004     0.167901 0.0003   0.4521
+ rem life(col)   5.3531E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167710 0.0005     0.167901 0.0003
+ rem life(abs)   5.3531E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3597E-01 0.0004
+ source points generated  75219                source_entropy  8.3958E+00
+
+  estimator     cycle   122   ave of    72 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166972       0.167609 0.0007     k(col/abs)          0.167609 0.0007     0.167609 0.0007   1.0000
+ k(absorption)     0.166972       0.167609 0.0007     k(abs/tk ln)        0.167754 0.0004     0.167904 0.0003   0.4439
+ k(trk length)     0.168152       0.167898 0.0003     k(tk ln/col)        0.167754 0.0004     0.167904 0.0003   0.4439
+ rem life(col)   5.3477E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167705 0.0005     0.167904 0.0003
+ rem life(abs)   5.3477E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3597E-01 0.0004
+ source points generated  74244                source_entropy  8.4060E+00
+
+  estimator     cycle   123   ave of    73 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168319       0.167619 0.0007     k(col/abs)          0.167619 0.0007     0.167619 0.0007   1.0000
+ k(absorption)     0.168319       0.167619 0.0007     k(abs/tk ln)        0.167755 0.0004     0.167895 0.0003   0.4282
+ k(trk length)     0.167459       0.167892 0.0003     k(tk ln/col)        0.167755 0.0004     0.167895 0.0003   0.4282
+ rem life(col)   5.3605E-01     5.3496E-01 0.0003     k(col/abs/tk ln)    0.167710 0.0005     0.167895 0.0003
+ rem life(abs)   5.3605E-01     5.3496E-01 0.0003     life(col/abs/tl)  5.3518E-01 0.0003   5.3598E-01 0.0004
+ source points generated  75558                source_entropy  8.4097E+00
+
+  estimator     cycle   124   ave of    74 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167453       0.167616 0.0007     k(col/abs)          0.167616 0.0007     0.167616 0.0007   1.0000
+ k(absorption)     0.167453       0.167616 0.0007     k(abs/tk ln)        0.167752 0.0004     0.167891 0.0003   0.4282
+ k(trk length)     0.167593       0.167888 0.0003     k(tk ln/col)        0.167752 0.0004     0.167891 0.0003   0.4282
+ rem life(col)   5.3448E-01     5.3495E-01 0.0003     k(col/abs/tk ln)    0.167707 0.0005     0.167891 0.0003
+ rem life(abs)   5.3448E-01     5.3495E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3597E-01 0.0004
+ source points generated  74598                source_entropy  8.4061E+00
+
+  estimator     cycle   125   ave of    75 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168050       0.167622 0.0007     k(col/abs)          0.167622 0.0007     0.167622 0.0007   1.0000
+ k(absorption)     0.168050       0.167622 0.0007     k(abs/tk ln)        0.167754 0.0004     0.167888 0.0003   0.4241
+ k(trk length)     0.167689       0.167885 0.0003     k(tk ln/col)        0.167754 0.0004     0.167888 0.0003   0.4241
+ rem life(col)   5.3430E-01     5.3494E-01 0.0003     k(col/abs/tk ln)    0.167710 0.0005     0.167888 0.0003
+ rem life(abs)   5.3430E-01     5.3494E-01 0.0003     life(col/abs/tl)  5.3517E-01 0.0003   5.3596E-01 0.0004
+ source points generated  75246                source_entropy  8.4041E+00
+
+  estimator     cycle   126   ave of    76 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169129       0.167642 0.0007     k(col/abs)          0.167642 0.0007     0.167642 0.0007   1.0000
+ k(absorption)     0.169129       0.167642 0.0007     k(abs/tk ln)        0.167766 0.0004     0.167893 0.0003   0.4302
+ k(trk length)     0.168165       0.167889 0.0003     k(tk ln/col)        0.167766 0.0004     0.167893 0.0003   0.4302
+ rem life(col)   5.3659E-01     5.3496E-01 0.0003     k(col/abs/tk ln)    0.167724 0.0005     0.167893 0.0003
+ rem life(abs)   5.3659E-01     5.3496E-01 0.0003     life(col/abs/tl)  5.3519E-01 0.0003   5.3598E-01 0.0004
+ source points generated  75521                source_entropy  8.4042E+00
+
+  estimator     cycle   127   ave of    77 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166698       0.167630 0.0007     k(col/abs)          0.167630 0.0007     0.167630 0.0007   1.0000
+ k(absorption)     0.166698       0.167630 0.0007     k(abs/tk ln)        0.167756 0.0004     0.167886 0.0003   0.4395
+ k(trk length)     0.167324       0.167882 0.0003     k(tk ln/col)        0.167756 0.0004     0.167886 0.0003   0.4395
+ rem life(col)   5.3651E-01     5.3498E-01 0.0003     k(col/abs/tk ln)    0.167714 0.0005     0.167886 0.0003
+ rem life(abs)   5.3651E-01     5.3498E-01 0.0003     life(col/abs/tl)  5.3521E-01 0.0003   5.3599E-01 0.0004
+ source points generated  73918                source_entropy  8.4011E+00
+
+  estimator     cycle   128   ave of    78 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167728       0.167631 0.0007     k(col/abs)          0.167631 0.0007     0.167631 0.0007   1.0000
+ k(absorption)     0.167728       0.167631 0.0007     k(abs/tk ln)        0.167758 0.0004     0.167888 0.0003   0.4394
+ k(trk length)     0.168064       0.167884 0.0003     k(tk ln/col)        0.167758 0.0004     0.167888 0.0003   0.4394
+ rem life(col)   5.3420E-01     5.3497E-01 0.0003     k(col/abs/tk ln)    0.167715 0.0005     0.167888 0.0003
+ rem life(abs)   5.3420E-01     5.3497E-01 0.0003     life(col/abs/tl)  5.3519E-01 0.0003   5.3596E-01 0.0004
+ source points generated  75321                source_entropy  8.3985E+00
+
+  estimator     cycle   129   ave of    79 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168938       0.167648 0.0007     k(col/abs)          0.167648 0.0007     0.167648 0.0007   1.0000
+ k(absorption)     0.168938       0.167648 0.0007     k(abs/tk ln)        0.167770 0.0004     0.167897 0.0003   0.4531
+ k(trk length)     0.168482       0.167892 0.0003     k(tk ln/col)        0.167770 0.0004     0.167897 0.0003   0.4531
+ rem life(col)   5.3532E-01     5.3498E-01 0.0003     k(col/abs/tk ln)    0.167729 0.0005     0.167897 0.0003
+ rem life(abs)   5.3532E-01     5.3498E-01 0.0003     life(col/abs/tl)  5.3520E-01 0.0003   5.3596E-01 0.0004
+ source points generated  75561                source_entropy  8.3993E+00
+
+  estimator     cycle   130   ave of    80 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168264       0.167655 0.0007     k(col/abs)          0.167655 0.0007     0.167655 0.0007   1.0000
+ k(absorption)     0.168264       0.167655 0.0007     k(abs/tk ln)        0.167776 0.0004     0.167903 0.0003   0.4571
+ k(trk length)     0.168328       0.167897 0.0003     k(tk ln/col)        0.167776 0.0004     0.167903 0.0003   0.4571
+ rem life(col)   5.3655E-01     5.3500E-01 0.0003     k(col/abs/tk ln)    0.167736 0.0005     0.167903 0.0003
+ rem life(abs)   5.3655E-01     5.3500E-01 0.0003     life(col/abs/tl)  5.3522E-01 0.0003   5.3599E-01 0.0004
+ source points generated  74717                source_entropy  8.4059E+00
+
+  estimator     cycle   131   ave of    81 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167583       0.167654 0.0007     k(col/abs)          0.167654 0.0007     0.167654 0.0007   1.0000
+ k(absorption)     0.167583       0.167654 0.0007     k(abs/tk ln)        0.167779 0.0004     0.167909 0.0003   0.4503
+ k(trk length)     0.168465       0.167904 0.0003     k(tk ln/col)        0.167779 0.0004     0.167909 0.0003   0.4503
+ rem life(col)   5.3689E-01     5.3502E-01 0.0003     k(col/abs/tk ln)    0.167738 0.0005     0.167909 0.0003
+ rem life(abs)   5.3689E-01     5.3502E-01 0.0003     life(col/abs/tl)  5.3524E-01 0.0003   5.3602E-01 0.0004
+ source points generated  74677                source_entropy  8.4060E+00
+
+  estimator     cycle   132   ave of    82 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166873       0.167645 0.0006     k(col/abs)          0.167645 0.0006     0.167645 0.0006   1.0000
+ k(absorption)     0.166873       0.167645 0.0006     k(abs/tk ln)        0.167775 0.0004     0.167910 0.0003   0.4443
+ k(trk length)     0.168066       0.167906 0.0003     k(tk ln/col)        0.167775 0.0004     0.167910 0.0003   0.4443
+ rem life(col)   5.3764E-01     5.3505E-01 0.0003     k(col/abs/tk ln)    0.167732 0.0005     0.167910 0.0003
+ rem life(abs)   5.3764E-01     5.3505E-01 0.0003     life(col/abs/tl)  5.3527E-01 0.0003   5.3607E-01 0.0004
+ source points generated  74685                source_entropy  8.3988E+00
+
+  estimator     cycle   133   ave of    83 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167253       0.167640 0.0006     k(col/abs)          0.167640 0.0006     0.167640 0.0006   1.0000
+ k(absorption)     0.167253       0.167640 0.0006     k(abs/tk ln)        0.167775 0.0004     0.167913 0.0003   0.4383
+ k(trk length)     0.168228       0.167910 0.0003     k(tk ln/col)        0.167775 0.0004     0.167913 0.0003   0.4383
+ rem life(col)   5.3740E-01     5.3508E-01 0.0003     k(col/abs/tk ln)    0.167730 0.0005     0.167913 0.0003
+ rem life(abs)   5.3740E-01     5.3508E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0003   5.3610E-01 0.0004
+ source points generated  75222                source_entropy  8.3960E+00
+
+  estimator     cycle   134   ave of    84 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168139       0.167646 0.0006     k(col/abs)          0.167646 0.0006     0.167646 0.0006   1.0000
+ k(absorption)     0.168139       0.167646 0.0006     k(abs/tk ln)        0.167777 0.0004     0.167911 0.0003   0.4346
+ k(trk length)     0.167743       0.167908 0.0003     k(tk ln/col)        0.167777 0.0004     0.167911 0.0003   0.4346
+ rem life(col)   5.3521E-01     5.3508E-01 0.0003     k(col/abs/tk ln)    0.167733 0.0005     0.167911 0.0003
+ rem life(abs)   5.3521E-01     5.3508E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0003   5.3610E-01 0.0004
+ source points generated  75403                source_entropy  8.3925E+00
+
+  estimator     cycle   135   ave of    85 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167733       0.167647 0.0006     k(col/abs)          0.167647 0.0006     0.167647 0.0006   1.0000
+ k(absorption)     0.167733       0.167647 0.0006     k(abs/tk ln)        0.167778 0.0004     0.167912 0.0003   0.4347
+ k(trk length)     0.168010       0.167909 0.0003     k(tk ln/col)        0.167778 0.0004     0.167912 0.0003   0.4347
+ rem life(col)   5.3644E-01     5.3510E-01 0.0003     k(col/abs/tk ln)    0.167734 0.0005     0.167912 0.0003
+ rem life(abs)   5.3644E-01     5.3510E-01 0.0003     life(col/abs/tl)  5.3531E-01 0.0003   5.3612E-01 0.0004
+ source points generated  74868                source_entropy  8.4138E+00
+
+  estimator     cycle   136   ave of    86 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166639       0.167635 0.0006     k(col/abs)          0.167635 0.0006     0.167635 0.0006   1.0000
+ k(absorption)     0.166639       0.167635 0.0006     k(abs/tk ln)        0.167769 0.0004     0.167907 0.0003   0.4434
+ k(trk length)     0.167390       0.167903 0.0003     k(tk ln/col)        0.167769 0.0004     0.167907 0.0003   0.4434
+ rem life(col)   5.3416E-01     5.3509E-01 0.0003     k(col/abs/tk ln)    0.167725 0.0005     0.167907 0.0003
+ rem life(abs)   5.3416E-01     5.3509E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0003   5.3612E-01 0.0004
+ source points generated  74410                source_entropy  8.4050E+00
+
+  estimator     cycle   137   ave of    87 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167702       0.167636 0.0006     k(col/abs)          0.167636 0.0006     0.167636 0.0006   1.0000
+ k(absorption)     0.167702       0.167636 0.0006     k(abs/tk ln)        0.167766 0.0004     0.167897 0.0003   0.4348
+ k(trk length)     0.167219       0.167895 0.0003     k(tk ln/col)        0.167766 0.0004     0.167897 0.0003   0.4348
+ rem life(col)   5.3339E-01     5.3507E-01 0.0003     k(col/abs/tk ln)    0.167723 0.0005     0.167897 0.0003
+ rem life(abs)   5.3339E-01     5.3507E-01 0.0003     life(col/abs/tl)  5.3528E-01 0.0003   5.3612E-01 0.0004
+ source points generated  75560                source_entropy  8.4012E+00
+
+  estimator     cycle   138   ave of    88 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166330       0.167621 0.0006     k(col/abs)          0.167621 0.0006     0.167621 0.0006   1.0000
+ k(absorption)     0.166330       0.167621 0.0006     k(abs/tk ln)        0.167754 0.0004     0.167890 0.0003   0.4507
+ k(trk length)     0.167098       0.167886 0.0003     k(tk ln/col)        0.167754 0.0004     0.167890 0.0003   0.4507
+ rem life(col)   5.3430E-01     5.3506E-01 0.0003     k(col/abs/tk ln)    0.167710 0.0005     0.167890 0.0003
+ rem life(abs)   5.3430E-01     5.3506E-01 0.0003     life(col/abs/tl)  5.3527E-01 0.0003   5.3604E-01 0.0004
+ source points generated  74421                source_entropy  8.3976E+00
+
+  estimator     cycle   139   ave of    89 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169700       0.167645 0.0006     k(col/abs)          0.167645 0.0006     0.167645 0.0006   1.0000
+ k(absorption)     0.169700       0.167645 0.0006     k(abs/tk ln)        0.167767 0.0004     0.167895 0.0003   0.4570
+ k(trk length)     0.168222       0.167890 0.0003     k(tk ln/col)        0.167767 0.0004     0.167895 0.0003   0.4570
+ rem life(col)   5.3748E-01     5.3509E-01 0.0003     k(col/abs/tk ln)    0.167726 0.0005     0.167895 0.0003
+ rem life(abs)   5.3748E-01     5.3509E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0003   5.3607E-01 0.0003
+ source points generated  76583                source_entropy  8.4073E+00
+
+  estimator     cycle   140   ave of    90 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169576       0.167666 0.0006     k(col/abs)          0.167666 0.0006     0.167666 0.0006   1.0000
+ k(absorption)     0.169576       0.167666 0.0006     k(abs/tk ln)        0.167781 0.0004     0.167902 0.0003   0.4683
+ k(trk length)     0.168352       0.167895 0.0003     k(tk ln/col)        0.167781 0.0004     0.167902 0.0003   0.4683
+ rem life(col)   5.3405E-01     5.3507E-01 0.0003     k(col/abs/tk ln)    0.167742 0.0005     0.167902 0.0003
+ rem life(abs)   5.3405E-01     5.3507E-01 0.0003     life(col/abs/tl)  5.3529E-01 0.0003   5.3607E-01 0.0003
+ source points generated  74960                source_entropy  8.3938E+00
+
+  estimator     cycle   141   ave of    91 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168729       0.167678 0.0006     k(col/abs)          0.167678 0.0006     0.167678 0.0006   1.0000
+ k(absorption)     0.168729       0.167678 0.0006     k(abs/tk ln)        0.167784 0.0004     0.167895 0.0003   0.4507
+ k(trk length)     0.167470       0.167890 0.0003     k(tk ln/col)        0.167784 0.0004     0.167895 0.0003   0.4507
+ rem life(col)   5.3524E-01     5.3508E-01 0.0003     k(col/abs/tk ln)    0.167749 0.0005     0.167895 0.0003
+ rem life(abs)   5.3524E-01     5.3508E-01 0.0003     life(col/abs/tl)  5.3529E-01 0.0003   5.3608E-01 0.0003
+ source points generated  74544                source_entropy  8.4011E+00
+
+  estimator     cycle   142   ave of    92 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167650       0.167677 0.0006     k(col/abs)          0.167677 0.0006     0.167677 0.0006   1.0000
+ k(absorption)     0.167650       0.167677 0.0006     k(abs/tk ln)        0.167785 0.0004     0.167897 0.0003   0.4499
+ k(trk length)     0.168100       0.167893 0.0003     k(tk ln/col)        0.167785 0.0004     0.167897 0.0003   0.4499
+ rem life(col)   5.3673E-01     5.3509E-01 0.0003     k(col/abs/tk ln)    0.167749 0.0005     0.167897 0.0003
+ rem life(abs)   5.3673E-01     5.3509E-01 0.0003     life(col/abs/tl)  5.3531E-01 0.0003   5.3610E-01 0.0003
+ source points generated  74529                source_entropy  8.4058E+00
+
+  estimator     cycle   143   ave of    93 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168324       0.167684 0.0006     k(col/abs)          0.167684 0.0006     0.167684 0.0006   1.0000
+ k(absorption)     0.168324       0.167684 0.0006     k(abs/tk ln)        0.167788 0.0004     0.167895 0.0003   0.4469
+ k(trk length)     0.167788       0.167892 0.0003     k(tk ln/col)        0.167788 0.0004     0.167895 0.0003   0.4469
+ rem life(col)   5.3430E-01     5.3509E-01 0.0003     k(col/abs/tk ln)    0.167753 0.0005     0.167895 0.0003
+ rem life(abs)   5.3430E-01     5.3509E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0003   5.3610E-01 0.0003
+ source points generated  75154                source_entropy  8.4096E+00
+
+  estimator     cycle   144   ave of    94 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169131       0.167700 0.0006     k(col/abs)          0.167700 0.0006     0.167700 0.0006   1.0000
+ k(absorption)     0.169131       0.167700 0.0006     k(abs/tk ln)        0.167796 0.0004     0.167897 0.0003   0.4464
+ k(trk length)     0.168017       0.167893 0.0002     k(tk ln/col)        0.167796 0.0004     0.167897 0.0003   0.4464
+ rem life(col)   5.3616E-01     5.3510E-01 0.0003     k(col/abs/tk ln)    0.167764 0.0005     0.167897 0.0003
+ rem life(abs)   5.3616E-01     5.3510E-01 0.0003     life(col/abs/tl)  5.3531E-01 0.0002   5.3610E-01 0.0003
+ source points generated  75406                source_entropy  8.4089E+00
+
+  estimator     cycle   145   ave of    95 cycles      combination         simple average    combined average     corr
+ k(collision)      0.166408       0.167686 0.0006     k(col/abs)          0.167686 0.0006     0.167686 0.0006   1.0000
+ k(absorption)     0.166408       0.167686 0.0006     k(abs/tk ln)        0.167790 0.0004     0.167897 0.0003   0.4408
+ k(trk length)     0.167943       0.167893 0.0002     k(tk ln/col)        0.167790 0.0004     0.167897 0.0003   0.4408
+ rem life(col)   5.3338E-01     5.3508E-01 0.0003     k(col/abs/tk ln)    0.167755 0.0005     0.167897 0.0003
+ rem life(abs)   5.3338E-01     5.3508E-01 0.0003     life(col/abs/tl)  5.3530E-01 0.0002   5.3611E-01 0.0003
+ source points generated  73737                source_entropy  8.3993E+00
+
+  estimator     cycle   146   ave of    96 cycles      combination         simple average    combined average     corr
+ k(collision)      0.169571       0.167706 0.0006     k(col/abs)          0.167706 0.0006     0.167706 0.0006   1.0000
+ k(absorption)     0.169571       0.167706 0.0006     k(abs/tk ln)        0.167800 0.0004     0.167899 0.0003   0.4384
+ k(trk length)     0.168013       0.167895 0.0002     k(tk ln/col)        0.167800 0.0004     0.167899 0.0003   0.4384
+ rem life(col)   5.3434E-01     5.3507E-01 0.0003     k(col/abs/tk ln)    0.167769 0.0005     0.167899 0.0003
+ rem life(abs)   5.3434E-01     5.3507E-01 0.0003     life(col/abs/tl)  5.3529E-01 0.0002   5.3609E-01 0.0003
+ source points generated  76322                source_entropy  8.4084E+00
+
+  estimator     cycle   147   ave of    97 cycles      combination         simple average    combined average     corr
+ k(collision)      0.170106       0.167731 0.0006     k(col/abs)          0.167731 0.0006     0.167731 0.0006   1.0000
+ k(absorption)     0.170106       0.167731 0.0006     k(abs/tk ln)        0.167815 0.0004     0.167903 0.0002   0.4468
+ k(trk length)     0.168276       0.167899 0.0002     k(tk ln/col)        0.167815 0.0004     0.167903 0.0002   0.4468
+ rem life(col)   5.3471E-01     5.3507E-01 0.0003     k(col/abs/tk ln)    0.167787 0.0005     0.167903 0.0002
+ rem life(abs)   5.3471E-01     5.3507E-01 0.0003     life(col/abs/tl)  5.3529E-01 0.0002   5.3609E-01 0.0003
+ source points generated  75237                source_entropy  8.4073E+00
+
+  estimator     cycle   148   ave of    98 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168232       0.167736 0.0006     k(col/abs)          0.167736 0.0006     0.167736 0.0006   1.0000
+ k(absorption)     0.168232       0.167736 0.0006     k(abs/tk ln)        0.167818 0.0004     0.167906 0.0002   0.4484
+ k(trk length)     0.168143       0.167901 0.0002     k(tk ln/col)        0.167818 0.0004     0.167906 0.0002   0.4484
+ rem life(col)   5.3395E-01     5.3506E-01 0.0003     k(col/abs/tk ln)    0.167791 0.0005     0.167906 0.0002
+ rem life(abs)   5.3395E-01     5.3506E-01 0.0003     life(col/abs/tl)  5.3528E-01 0.0002   5.3609E-01 0.0003
+ source points generated  74157                source_entropy  8.3931E+00
+
+  estimator     cycle   149   ave of    99 cycles      combination         simple average    combined average     corr
+ k(collision)      0.167217       0.167730 0.0006     k(col/abs)          0.167730 0.0006     0.167730 0.0006   1.0000
+ k(absorption)     0.167217       0.167730 0.0006     k(abs/tk ln)        0.167817 0.0004     0.167908 0.0002   0.4437
+ k(trk length)     0.168153       0.167904 0.0002     k(tk ln/col)        0.167817 0.0004     0.167908 0.0002   0.4437
+ rem life(col)   5.3639E-01     5.3507E-01 0.0003     k(col/abs/tk ln)    0.167788 0.0005     0.167908 0.0002
+ rem life(abs)   5.3639E-01     5.3507E-01 0.0003     life(col/abs/tl)  5.3529E-01 0.0002   5.3611E-01 0.0003
+ source points generated  74528                source_entropy  8.3957E+00
+
+  estimator     cycle   150   ave of   100 cycles      combination         simple average    combined average     corr
+ k(collision)      0.168899       0.167742 0.0006     k(col/abs)          0.167742 0.0006     0.167742 0.0006   1.0000
+ k(absorption)     0.168899       0.167742 0.0006     k(abs/tk ln)        0.167825 0.0004     0.167913 0.0002   0.4499
+ k(trk length)     0.168299       0.167908 0.0002     k(tk ln/col)        0.167825 0.0004     0.167913 0.0002   0.4499
+ rem life(col)   5.3563E-01     5.3508E-01 0.0003     k(col/abs/tk ln)    0.167797 0.0005     0.167913 0.0002
+ rem life(abs)   5.3563E-01     5.3508E-01 0.0003     life(col/abs/tl)  5.3529E-01 0.0002   5.3611E-01 0.0003
+ source points generated  75664                source_entropy  8.4031E+00
+
+ source distribution written to file ./output-files/flibe-enriched-005.0cm.mcnp.s        cycle=   150
+1problem summary (active cycles only)              source particle weight for summary table normalization =      7500000.00
+
+      run terminated when     150 kcode cycles were done.
++                                                                                                    02/27/15 01:46:20 
+
+ =====>     200.33 M neutrons/hr    (based on wall-clock time in mcrun)
+
+
+      Moderator Qualification - Uranium Marble - FLiBe w/ Enriched Li - 005.0 cm           probid =  02/27/15 01:42:58 
+
+ neutron creation    tracks      weight        energy            neutron loss        tracks      weight        energy
+                                 (per source particle)                                           (per source particle)
+
+ source             7500201    1.0000E+00    2.0446E+00          escape             5705280    5.2448E-01    7.7119E-01
+ nucl. interaction        0    0.            0.                  energy cutoff            0    0.            0.        
+ particle decay           0    0.            0.                  time cutoff              0    0.            0.        
+ weight window            0    0.            0.                  weight window            0    0.            0.        
+ cell importance          0    0.            0.                  cell importance          0    0.            0.        
+ weight cutoff            0    4.6223E-02    8.4326E-03          weight cutoff      1806838    4.6172E-02    8.4327E-03
+ e or t importance        0    0.            0.                  e or t importance        0    0.            0.        
+ dxtran                   0    0.            0.                  dxtran                   0    0.            0.        
+ forced collisions        0    0.            0.                  forced collisions        0    0.            0.        
+ exp. transform           0    0.            0.                  exp. transform           0    0.            0.        
+ upscattering             0    0.            0.                  downscattering           0    0.            7.8292E-01
+ photonuclear             0    0.            0.                  capture                  0    4.1336E-01    3.6714E-01
+ (n,xn)               23829    2.5762E-03    2.0231E-03          loss to (n,xn)       11912    1.2879E-03    9.4978E-03
+ prompt fission           0    0.            0.                  loss to fission          0    6.3495E-02    1.1584E-01
+ delayed fission          0    0.            0.                  nucl. interaction        0    0.            0.        
+ prompt photofis          0    0.            0.                  particle decay           0    0.            0.        
+ tabular boundary         0    0.            0.                  tabular boundary         0    0.            0.        
+ tabular sampling         0    0.            0.                  elastic scatter          0    0.            0.        
+     total          7524030    1.0488E+00    2.0550E+00              total          7524030    1.0488E+00    2.0550E+00
+
+   number of neutrons banked                   17904        average time of (shakes)              cutoffs
+   neutron tracks per source particle     1.0032E+00          escape            5.9029E-01          tco   1.0000E+33
+   neutron collisions per source particle 3.3664E+00          capture           5.3380E-01          eco   0.0000E+00
+   total neutron collisions                 25247760          capture or escape 5.6539E-01          wc1  -5.0000E-01
+   net multiplication              1.0013E+00 0.0000          any termination   5.6256E-01          wc2  -2.5000E-01
+
+ computer time so far in this run     3.37 minutes            maximum number ever in bank         2
+ computer time in mcrun               3.36 minutes            bank overflows to backup file       0
+ source particles per minute            3.3292E+06
+ random numbers generated                384276004            most random numbers used was         285 in history       87297
+
+ range of sampled source weights = 9.7296E-01 to 2.2927E+00
+1neutron  activity in each cell                                                                         print table 126
+
+                       tracks     population   collisions   collisions     number        flux        average      average
+              cell    entering                               * weight     weighted     weighted   track weight   track mfp
+                                                          (per history)    energy       energy     (relative)      (cm)
+
+        1        1     8165085      7506296      3391904    4.0123E-01   1.1618E+00   1.8321E+00   9.0190E-01   2.6878E+00
+        2        2     8148277      7511370     21855856    1.9786E+00   9.3552E-01   1.4829E+00   7.1634E-01   3.0866E+00
+
+           total      16313362     15017666     25247760    2.3798E+00
+1keff results for: Moderator Qualification - Uranium Marble - FLiBe w/ Enriched Li - 005.0 cm           probid =  02/27/15 01:42:58 
+
+
+ the initial fission neutron source distribution used the   1 source points that were input on the ksrc card.
+ the criticality problem was scheduled to skip  50 cycles and run a total of  150 cycles with nominally    75000 neutrons per cycle.
+ this problem has run  50 inactive cycles with  3689320 neutron histories and  100 active cycles with     7500201 neutron histories.
+
+
+ this calculation has completed the requested number of keff cycles using a total of    11189521 fission neutron source histories.
+ all cells with fissionable material were sampled and had fission neutron source points.
+
+
+ comment.
+ comment. Average fission-source entropy for the last half of cycles:
+ comment.      H=  8.40E+00  with population std.dev.=  5.25E-03
+ comment.
+ comment.
+ comment. Cycle    5 is the first cycle having fission-source
+ comment.   entropy within 1 std.dev. of the average
+ comment.   entropy for the last half of cycles.
+ comment.   At least this many cycles should be discarded.
+ comment.
+ comment. Source entropy convergence check passed. 
+ comment.
+ the results of the w test for normality applied to the individual collision, absorption, and track-length keff cycle values are:
+
+           the k( collision) cycle values appear normally distributed at the 95 percent confidence level                       
+           the k(absorption) cycle values appear normally distributed at the 95 percent confidence level                       
+           the k(trk length) cycle values appear normally distributed at the 95 percent confidence level                       
+
+
+ -----------------------------------------------------------------------------------------------------------------------------------
+ |                                                                                                                                 |
+ | the final estimated combined collision/absorption/track-length keff = 0.16791 with an estimated standard deviation of 0.00004   |
+ |                                                                                                                                 |
+ | the estimated 68, 95, & 99 percent keff confidence intervals are 0.16787 to 0.16795, 0.16783 to 0.16799, and 0.16781 to 0.16802 |
+ |                                                                                                                                 |
+ | the final combined (col/abs/tl) prompt removal lifetime = 5.3611E-09 seconds with an estimated standard deviation of 1.7689E-12 |
+ |                                                                                                                                 |
+ | the average neutron energy causing fission = 1.8245E+00 mev                                                                     |
+ | the energy corresponding to the average neutron lethargy causing fission = 1.1525E+00 mev                                       |
+ |                                                                                                                                 |
+ | the percentages of fissions caused by neutrons in the thermal, intermediate, and fast neutron ranges are:                       |
+ |         (<0.625 ev):   0.00%         (0.625 ev - 100 kev):   3.26%          (>100 kev):  96.74%                                 |
+ |                                                                                                                                 |
+ | the average fission neutrons produced per neutron absorbed (capture + fission) in all cells with fission = 2.4262E+00           |
+ | the average fission neutrons produced per neutron absorbed (capture + fission) in all the geometry cells = 3.5176E-01           |
+ |                                                                                                                                 |
+ | the average number of neutrons produced per fission = 2.642                                                                     |
+ |                                                                                                                                 |
+ -----------------------------------------------------------------------------------------------------------------------------------
+
+
+ the estimated average keffs, one standard deviations, and 68, 95, and 99 percent confidence intervals are:
+
+        keff estimator       keff     standard deviation      68% confidence        95% confidence        99% confidence       corr
+
+             collision     0.16774         0.00010          0.16764 to 0.16785    0.16754 to 0.16795    0.16747 to 0.16801
+            absorption     0.16774         0.00010          0.16764 to 0.16785    0.16754 to 0.16795    0.16747 to 0.16801
+          track length     0.16791         0.00004          0.16787 to 0.16795    0.16783 to 0.16799    0.16780 to 0.16801
+            col/absorp     0.16774         0.00010          0.16764 to 0.16785    0.16754 to 0.16795    0.16747 to 0.16801    1.0000
+           abs/trk len     0.16791         0.00004          0.16787 to 0.16795    0.16783 to 0.16799    0.16781 to 0.16802    0.4499
+           col/trk len     0.16791         0.00004          0.16787 to 0.16795    0.16783 to 0.16799    0.16781 to 0.16802    0.4499
+       col/abs/trk len     0.16791         0.00004          0.16787 to 0.16795    0.16783 to 0.16799    0.16781 to 0.16802
+
+
+ if the largest of each keff occurred on the next cycle, the keff results and 68, 95, and 99 percent confidence intervals would be:
+
+        keff estimator       keff     standard deviation      68% confidence        95% confidence        99% confidence
+
+             collision     0.16777         0.00010          0.16766 to 0.16787    0.16756 to 0.16797    0.16749 to 0.16804
+            absorption     0.16777         0.00010          0.16766 to 0.16787    0.16756 to 0.16797    0.16749 to 0.16804
+          track length     0.16792         0.00004          0.16788 to 0.16796    0.16784 to 0.16800    0.16781 to 0.16803
+       col/abs/trk len     0.16793         0.00004          0.16788 to 0.16797    0.16784 to 0.16801    0.16782 to 0.16804
+
+
+ the estimated average prompt removal lifetimes, one standard deviations, and 68, 95, and 99 percent confidence intervals are (sec):
+
+       estimator      lifetime     std. dev.         68% confidence           95% confidence           99% confidence           corr
+
+       collision   5.35075E-09   1.37448E-12    5.3494E-09 to 5.3521E-09 5.3480E-09 to 5.3535E-09 5.3471E-09 to 5.3544E-09
+      absorption   5.35075E-09   1.37448E-12    5.3494E-09 to 5.3521E-09 5.3480E-09 to 5.3535E-09 5.3471E-09 to 5.3544E-09
+    track length   5.35729E-09   1.13814E-12    5.3562E-09 to 5.3584E-09 5.3550E-09 to 5.3596E-09 5.3543E-09 to 5.3603E-09
+      col/absorp   5.35075E-09   1.37448E-12    5.3494E-09 to 5.3521E-09 5.3480E-09 to 5.3535E-09 5.3471E-09 to 5.3544E-09    1.0000
+     abs/trk len   5.36111E-09   1.76894E-12    5.3593E-09 to 5.3629E-09 5.3576E-09 to 5.3646E-09 5.3564E-09 to 5.3658E-09    0.9303
+     col/trk len   5.36111E-09   1.76894E-12    5.3593E-09 to 5.3629E-09 5.3576E-09 to 5.3646E-09 5.3564E-09 to 5.3658E-09    0.9303
+ col/abs/trk len   5.36111E-09   1.76894E-12    5.3593E-09 to 5.3629E-09 5.3576E-09 to 5.3646E-09 5.3564E-09 to 5.3658E-09
+
+ absorption estimates of prompt lifetimes (sec):
+
+                             escape        capture        fission        removal
+
+            fraction    5.23779E-01    4.12811E-01    6.34103E-02    1.00000E+00
+       lifetime(abs)    1.02157E-08    1.29618E-08    8.43831E-08    5.35075E-09
+     lifetime(c/a/t)    1.02354E-08    1.29868E-08    8.45464E-08    5.36111E-09
+
+1average individual and combined collision/absorption/track-length keff results for  7 different batch sizes
+
+ cycles per  number of    average keff estimators and deviations      normality  average k(c/a/t)    k(c/a/t) confidence intervals
+ keff batch  k batches  k(col) st dev  k(abs) st dev  k(trk) st dev   co/ab/trk  k(c/a/t) st dev    95% confidence    99% confidence
+
+       1        100  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0000  |95/95/95|  0.16791 0.00004   0.16783-0.16799   0.16781-0.16802
+       2         50  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0000  |95/95/95|  0.16791 0.00005   0.16781-0.16800   0.16778-0.16803
+       4         25  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0000  |95/95/95|  0.16791 0.00005   0.16780-0.16802   0.16776-0.16806
+       5         20  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0000  |95/95/95|  0.16791 0.00005   0.16780-0.16802   0.16776-0.16806
+      10         10  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0000  |95/95/95|  0.16791 0.00005   0.16780-0.16802   0.16775-0.16807
+      20          5  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0000  |95/95/95|  0.16790 0.00006   0.16765-0.16816   0.16731-0.16850
+      25          4  |  0.1677 0.0001  0.1677 0.0001  0.1679 0.0001  |95/95/95|  0.16791 0.00008   0.16688-0.16895   0.16273-0.17310
+1individual and average keff estimator results by cycle
+
+  keff     neutron    keff estimators by cycle           average keff estimators and deviations                average k(c/a/t)
+ cycle   histories   k(coll)  k(abs)  k(track)     k(coll)  st dev    k(abs)  st dev   k(track) st dev    k(c/a/t)  st dev    fom
+
+     1       75000 | 0.21690  0.21690  0.21624  | 
+     2       32712 | 0.18531  0.18531  0.18389  | 
+     3       64074 | 0.17334  0.17334  0.17537  | 
+     4       70134 | 0.17124  0.17124  0.17076  | 
+     5       74105 | 0.16984  0.16984  0.16933  | 
+     6       74450 | 0.16653  0.16653  0.16798  | 
+     7       73584 | 0.16788  0.16788  0.16911  | 
+     8       75602 | 0.16689  0.16689  0.16793  | 
+     9       74706 | 0.16820  0.16820  0.16809  | 
+    10       75634 | 0.16674  0.16674  0.16725  | 
+ -----------------------------------------------------------------------------------------------------------------------------------
+    11       74303 | 0.16730  0.16730  0.16741  | 
+    12       75238 | 0.16801  0.16801  0.16718  | 
+    13       75290 | 0.16803  0.16803  0.16676  | 
+    14       74904 | 0.16716  0.16716  0.16754  | 
+    15       74525 | 0.16834  0.16834  0.16765  | 
+    16       75619 | 0.16644  0.16644  0.16711  | 
+    17       74198 | 0.16780  0.16780  0.16776  | 
+    18       75613 | 0.16747  0.16747  0.16791  | 
+    19       74961 | 0.16660  0.16660  0.16760  | 
+    20       74516 | 0.16961  0.16961  0.16812  | 
+ -----------------------------------------------------------------------------------------------------------------------------------
+    21       76407 | 0.16856  0.16856  0.16801  | 
+    22       74624 | 0.16695  0.16695  0.16725  | 
+    23       74119 | 0.16792  0.16792  0.16805  | 
+    24       75590 | 0.16401  0.16401  0.16695  | 
+    25       73380 | 0.16780  0.16780  0.16865  | 
+    26       76804 | 0.16862  0.16862  0.16766  | 
+    27       75403 | 0.16860  0.16860  0.16785  | 
+    28       74994 | 0.16814  0.16814  0.16820  | 
+    29       74781 | 0.16767  0.16767  0.16784  | 
+    30       74752 | 0.16695  0.16695  0.16804  | 
+ -----------------------------------------------------------------------------------------------------------------------------------
+    31       74557 | 0.16661  0.16661  0.16768  | 
+    32       74775 | 0.16837  0.16837  0.16853  | 
+    33       75749 | 0.16714  0.16714  0.16842  | 
+    34       74366 | 0.16918  0.16918  0.16756  | 
+    35       75803 | 0.16623  0.16623  0.16728  | 
+    36       73623 | 0.16663  0.16663  0.16745  | 
+    37       75350 | 0.16696  0.16696  0.16768  | 
+    38       75137 | 0.16996  0.16996  0.16794  | 
+    39       76152 | 0.16788  0.16788  0.16766  | 
+    40       74117 | 0.16849  0.16849  0.16837  | 
+ -----------------------------------------------------------------------------------------------------------------------------------
+    41       75235 | 0.16676  0.16676  0.16820  | 
+    42       74241 | 0.16648  0.16648  0.16718  | 
+    43       74817 | 0.16731  0.16731  0.16787  | 
+    44       75360 | 0.16764  0.16764  0.16755  | 
+    45       75107 | 0.16823  0.16823  0.16796  | 
+    46       75292 | 0.16936  0.16936  0.16823  | 
+    47       75513 | 0.17029  0.17029  0.16857  | 
+    48       75420 | 0.16711  0.16711  0.16777  | 
+    49       73679 | 0.16687  0.16687  0.16758  | 
+    50       75005 | 0.16769  0.16769  0.16815  | 
+ -------------------  begin active keff cycles  ------------------------------------------------------------------------------------
+    51       75349 | 0.16683  0.16683  0.16823  | 
+    52       74631 | 0.16710  0.16710  0.16785  |  0.16697 0.00013   0.16697 0.00013   0.16804 0.00019  | 
+    53       75227 | 0.16803  0.16803  0.16726  |  0.16732 0.00036   0.16732 0.00036   0.16778 0.00028  | 
+    54       75476 | 0.16612  0.16612  0.16783  |  0.16702 0.00039   0.16702 0.00039   0.16779 0.00020  |  0.16755 0.00016    293353
+    55       74083 | 0.16744  0.16744  0.16784  |  0.16710 0.00032   0.16710 0.00032   0.16780 0.00015  |  0.16760 0.00013    382914
+    56       75622 | 0.16733  0.16733  0.16809  |  0.16714 0.00026   0.16714 0.00026   0.16785 0.00014  |  0.16764 0.00013    336287
+    57       74960 | 0.16795  0.16795  0.16810  |  0.16726 0.00025   0.16726 0.00025   0.16789 0.00012  |  0.16773 0.00013    272154
+    58       75221 | 0.16749  0.16749  0.16771  |  0.16729 0.00022   0.16729 0.00022   0.16786 0.00011  |  0.16772 0.00011    331603
+    59       74674 | 0.16784  0.16784  0.16904  |  0.16735 0.00020   0.16735 0.00020   0.16799 0.00016  |  0.16775 0.00019    101256
+    60       75203 | 0.16840  0.16840  0.16873  |  0.16745 0.00021   0.16745 0.00021   0.16807 0.00016  |  0.16787 0.00021     76319
+ -----------------------------------------------------------------------------------------------------------------------------------
+    61       75179 | 0.16732  0.16732  0.16806  |  0.16744 0.00019   0.16744 0.00019   0.16807 0.00015  |  0.16786 0.00019     80700
+    62       74467 | 0.16781  0.16781  0.16761  |  0.16747 0.00018   0.16747 0.00018   0.16803 0.00014  |  0.16783 0.00016     99961
+    63       75170 | 0.16756  0.16756  0.16847  |  0.16748 0.00016   0.16748 0.00016   0.16806 0.00013  |  0.16785 0.00016     98200
+    64       74878 | 0.16738  0.16738  0.16812  |  0.16747 0.00015   0.16747 0.00015   0.16807 0.00012  |  0.16785 0.00015    101938
+    65       74857 | 0.16746  0.16746  0.16748  |  0.16747 0.00014   0.16747 0.00014   0.16803 0.00012  |  0.16780 0.00014    109671
+    66       75044 | 0.16734  0.16734  0.16799  |  0.16746 0.00013   0.16746 0.00013   0.16803 0.00011  |  0.16780 0.00013    113321
+    67       74903 | 0.16894  0.16894  0.16803  |  0.16755 0.00015   0.16755 0.00015   0.16803 0.00011  |  0.16788 0.00012    137182
+    68       75700 | 0.16919  0.16919  0.16813  |  0.16764 0.00017   0.16764 0.00017   0.16803 0.00010  |  0.16795 0.00011    156236
+    69       75089 | 0.16850  0.16850  0.16811  |  0.16769 0.00017   0.16769 0.00017   0.16804 0.00009  |  0.16797 0.00010    169927
+    70       74732 | 0.16903  0.16903  0.16790  |  0.16775 0.00017   0.16775 0.00017   0.16803 0.00009  |  0.16798 0.00009    194688
+ -----------------------------------------------------------------------------------------------------------------------------------
+    71       75213 | 0.16802  0.16802  0.16821  |  0.16777 0.00016   0.16777 0.00016   0.16804 0.00009  |  0.16799 0.00009    202329
+    72       74537 | 0.16760  0.16760  0.16805  |  0.16776 0.00016   0.16776 0.00016   0.16804 0.00008  |  0.16799 0.00008    210475
+    73       74707 | 0.16892  0.16892  0.16793  |  0.16781 0.00016   0.16781 0.00016   0.16803 0.00008  |  0.16800 0.00008    231205
+    74       75481 | 0.16633  0.16633  0.16781  |  0.16775 0.00016   0.16775 0.00016   0.16802 0.00008  |  0.16799 0.00008    221099
+    75       73770 | 0.16734  0.16734  0.16763  |  0.16773 0.00016   0.16773 0.00016   0.16801 0.00007  |  0.16797 0.00008    218647
+    76       75482 | 0.16584  0.16584  0.16709  |  0.16766 0.00017   0.16766 0.00017   0.16797 0.00008  |  0.16795 0.00009    166162
+    77       74374 | 0.16814  0.16814  0.16755  |  0.16768 0.00016   0.16768 0.00016   0.16796 0.00008  |  0.16793 0.00008    172944
+    78       76058 | 0.16869  0.16869  0.16771  |  0.16771 0.00016   0.16771 0.00016   0.16795 0.00008  |  0.16792 0.00008    185798
+    79       75071 | 0.16712  0.16712  0.16761  |  0.16769 0.00016   0.16769 0.00016   0.16794 0.00007  |  0.16791 0.00008    185616
+    80       74366 | 0.16737  0.16737  0.16736  |  0.16768 0.00015   0.16768 0.00015   0.16792 0.00007  |  0.16789 0.00008    180842
+ -----------------------------------------------------------------------------------------------------------------------------------
+    81       75135 | 0.16699  0.16699  0.16780  |  0.16766 0.00015   0.16766 0.00015   0.16791 0.00007  |  0.16789 0.00008    183300
+    82       74763 | 0.16868  0.16868  0.16814  |  0.16769 0.00015   0.16769 0.00015   0.16792 0.00007  |  0.16790 0.00007    189521
+    83       75701 | 0.16831  0.16831  0.16779  |  0.16771 0.00014   0.16771 0.00014   0.16792 0.00007  |  0.16790 0.00007    198473
+    84       74800 | 0.16615  0.16615  0.16775  |  0.16766 0.00015   0.16766 0.00015   0.16791 0.00007  |  0.16789 0.00007    197154
+    85       73919 | 0.16859  0.16859  0.16725  |  0.16769 0.00014   0.16769 0.00014   0.16789 0.00007  |  0.16787 0.00007    199097
+    86       76024 | 0.16899  0.16899  0.16817  |  0.16773 0.00015   0.16773 0.00015   0.16790 0.00007  |  0.16788 0.00007    202520
+    87       75138 | 0.16839  0.16839  0.16820  |  0.16774 0.00014   0.16774 0.00014   0.16791 0.00006  |  0.16789 0.00007    205083
+    88       74774 | 0.16828  0.16828  0.16778  |  0.16776 0.00014   0.16776 0.00014   0.16791 0.00006  |  0.16789 0.00006    212273
+    89       74932 | 0.16660  0.16660  0.16764  |  0.16773 0.00014   0.16773 0.00014   0.16790 0.00006  |  0.16789 0.00006    211412
+    90       74430 | 0.16786  0.16786  0.16852  |  0.16773 0.00014   0.16773 0.00014   0.16791 0.00006  |  0.16790 0.00006    203420
+ -----------------------------------------------------------------------------------------------------------------------------------
+    91       75472 | 0.16766  0.16766  0.16855  |  0.16773 0.00013   0.16773 0.00013   0.16793 0.00006  |  0.16791 0.00006    196006
+    92       74934 | 0.16742  0.16742  0.16779  |  0.16772 0.00013   0.16772 0.00013   0.16793 0.00006  |  0.16791 0.00006    199512
+    93       74930 | 0.16654  0.16654  0.16804  |  0.16769 0.00013   0.16769 0.00013   0.16793 0.00006  |  0.16791 0.00006    201253
+    94       74611 | 0.16858  0.16858  0.16753  |  0.16771 0.00013   0.16771 0.00013   0.16792 0.00006  |  0.16790 0.00006    207744
+    95       75980 | 0.16601  0.16601  0.16742  |  0.16768 0.00013   0.16768 0.00013   0.16791 0.00006  |  0.16789 0.00006    197584
+    96       73868 | 0.16843  0.16843  0.16744  |  0.16769 0.00013   0.16769 0.00013   0.16790 0.00006  |  0.16788 0.00006    201666
+    97       76090 | 0.16914  0.16914  0.16801  |  0.16772 0.00013   0.16772 0.00013   0.16790 0.00006  |  0.16788 0.00006    207638
+    98       75319 | 0.16623  0.16623  0.16717  |  0.16769 0.00013   0.16769 0.00013   0.16789 0.00006  |  0.16787 0.00006    192917
+    99       73840 | 0.16896  0.16896  0.16789  |  0.16772 0.00013   0.16772 0.00013   0.16789 0.00006  |  0.16787 0.00006    199400
+   100       76127 | 0.16773  0.16773  0.16819  |  0.16772 0.00013   0.16772 0.00013   0.16789 0.00006  |  0.16788 0.00006    200904
+ -----------------------------------------------------------------------------------------------------------------------------------
+   101       74553 | 0.16515  0.16515  0.16762  |  0.16767 0.00014   0.16767 0.00014   0.16789 0.00005  |  0.16787 0.00006    197221
+   102       73829 | 0.16682  0.16682  0.16806  |  0.16765 0.00013   0.16765 0.00013   0.16789 0.00005  |  0.16788 0.00006    199004
+   103       75771 | 0.16668  0.16668  0.16785  |  0.16763 0.00013   0.16763 0.00013   0.16789 0.00005  |  0.16788 0.00005    200813
+   104       75000 | 0.16895  0.16895  0.16849  |  0.16766 0.00013   0.16766 0.00013   0.16790 0.00005  |  0.16789 0.00006    196076
+   105       76009 | 0.16826  0.16826  0.16821  |  0.16767 0.00013   0.16767 0.00013   0.16791 0.00005  |  0.16790 0.00005    197734
+   106       74743 | 0.16851  0.16851  0.16810  |  0.16768 0.00013   0.16768 0.00013   0.16791 0.00005  |  0.16790 0.00005    201443
+   107       75044 | 0.16671  0.16671  0.16762  |  0.16767 0.00013   0.16767 0.00013   0.16790 0.00005  |  0.16790 0.00005    201410
+   108       74196 | 0.16730  0.16730  0.16772  |  0.16766 0.00013   0.16766 0.00013   0.16790 0.00005  |  0.16789 0.00005    203665
+   109       75194 | 0.16821  0.16821  0.16856  |  0.16767 0.00012   0.16767 0.00012   0.16791 0.00005  |  0.16790 0.00005    196899
+   110       75391 | 0.16653  0.16653  0.16756  |  0.16765 0.00012   0.16765 0.00012   0.16791 0.00005  |  0.16790 0.00005    195592
+ -----------------------------------------------------------------------------------------------------------------------------------
+   111       74395 | 0.16786  0.16786  0.16765  |  0.16765 0.00012   0.16765 0.00012   0.16790 0.00005  |  0.16789 0.00005    198344
+   112       75589 | 0.16777  0.16777  0.16759  |  0.16766 0.00012   0.16766 0.00012   0.16790 0.00005  |  0.16789 0.00005    200298
+   113       75079 | 0.16765  0.16765  0.16777  |  0.16766 0.00012   0.16766 0.00012   0.16789 0.00005  |  0.16789 0.00005    203316
+   114       75133 | 0.16557  0.16557  0.16793  |  0.16762 0.00012   0.16762 0.00012   0.16790 0.00005  |  0.16789 0.00005    203687
+   115       74130 | 0.16469  0.16469  0.16662  |  0.16758 0.00013   0.16758 0.00013   0.16788 0.00005  |  0.16788 0.00005    172651
+   116       74695 | 0.16908  0.16908  0.16829  |  0.16760 0.00013   0.16760 0.00013   0.16788 0.00005  |  0.16789 0.00005    174701
+   117       77084 | 0.16713  0.16713  0.16762  |  0.16759 0.00012   0.16759 0.00012   0.16788 0.00005  |  0.16788 0.00005    175713
+   118       74208 | 0.16718  0.16718  0.16763  |  0.16759 0.00012   0.16759 0.00012   0.16787 0.00005  |  0.16788 0.00005    176967
+   119       75193 | 0.16757  0.16757  0.16825  |  0.16759 0.00012   0.16759 0.00012   0.16788 0.00005  |  0.16788 0.00005    176491
+   120       75048 | 0.16845  0.16845  0.16833  |  0.16760 0.00012   0.16760 0.00012   0.16789 0.00005  |  0.16789 0.00005    176554
+ -----------------------------------------------------------------------------------------------------------------------------------
+   121       75300 | 0.16887  0.16887  0.16848  |  0.16762 0.00012   0.16762 0.00012   0.16789 0.00005  |  0.16790 0.00005    174997
+   122       75219 | 0.16697  0.16697  0.16815  |  0.16761 0.00012   0.16761 0.00012   0.16790 0.00005  |  0.16790 0.00005    174972
+   123       74244 | 0.16832  0.16832  0.16746  |  0.16762 0.00012   0.16762 0.00012   0.16789 0.00005  |  0.16790 0.00005    176254
+   124       75558 | 0.16745  0.16745  0.16759  |  0.16762 0.00012   0.16762 0.00012   0.16789 0.00005  |  0.16789 0.00005    177376
+   125       74598 | 0.16805  0.16805  0.16769  |  0.16762 0.00011   0.16762 0.00011   0.16789 0.00005  |  0.16789 0.00005    180048
+   126       75246 | 0.16913  0.16913  0.16817  |  0.16764 0.00011   0.16764 0.00011   0.16789 0.00005  |  0.16789 0.00005    183369
+   127       75521 | 0.16670  0.16670  0.16732  |  0.16763 0.00011   0.16763 0.00011   0.16788 0.00005  |  0.16789 0.00005    180507
+   128       73918 | 0.16773  0.16773  0.16806  |  0.16763 0.00011   0.16763 0.00011   0.16788 0.00005  |  0.16789 0.00005    182171
+   129       75321 | 0.16894  0.16894  0.16848  |  0.16765 0.00011   0.16765 0.00011   0.16789 0.00005  |  0.16790 0.00005    180605
+   130       75561 | 0.16826  0.16826  0.16833  |  0.16766 0.00011   0.16766 0.00011   0.16790 0.00005  |  0.16790 0.00005    180428
+ -----------------------------------------------------------------------------------------------------------------------------------
+   131       74717 | 0.16758  0.16758  0.16846  |  0.16765 0.00011   0.16765 0.00011   0.16790 0.00005  |  0.16791 0.00005    177250
+   132       74677 | 0.16687  0.16687  0.16807  |  0.16764 0.00011   0.16764 0.00011   0.16791 0.00004  |  0.16791 0.00005    177845
+   133       74685 | 0.16725  0.16725  0.16823  |  0.16764 0.00011   0.16764 0.00011   0.16791 0.00004  |  0.16791 0.00005    177586
+   134       75222 | 0.16814  0.16814  0.16774  |  0.16765 0.00011   0.16765 0.00011   0.16791 0.00004  |  0.16791 0.00005    180192
+   135       75403 | 0.16773  0.16773  0.16801  |  0.16765 0.00010   0.16765 0.00010   0.16791 0.00004  |  0.16791 0.00005    182042
+   136       74868 | 0.16664  0.16664  0.16739  |  0.16764 0.00010   0.16764 0.00010   0.16790 0.00004  |  0.16791 0.00005    179935
+   137       74410 | 0.16770  0.16770  0.16722  |  0.16764 0.00010   0.16764 0.00010   0.16790 0.00004  |  0.16790 0.00005    176907
+   138       75560 | 0.16633  0.16633  0.16710  |  0.16762 0.00010   0.16762 0.00010   0.16789 0.00004  |  0.16789 0.00005    170681
+   139       74421 | 0.16970  0.16970  0.16822  |  0.16764 0.00010   0.16764 0.00010   0.16789 0.00004  |  0.16790 0.00005    174203
+   140       76583 | 0.16958  0.16958  0.16835  |  0.16767 0.00011   0.16767 0.00011   0.16790 0.00004  |  0.16790 0.00005    175980
+ -----------------------------------------------------------------------------------------------------------------------------------
+   141       74960 | 0.16873  0.16873  0.16747  |  0.16768 0.00011   0.16768 0.00011   0.16789 0.00004  |  0.16789 0.00004    177224
+   142       74544 | 0.16765  0.16765  0.16810  |  0.16768 0.00010   0.16768 0.00010   0.16789 0.00004  |  0.16790 0.00004    178372
+   143       74529 | 0.16832  0.16832  0.16779  |  0.16768 0.00010   0.16768 0.00010   0.16789 0.00004  |  0.16790 0.00004    180908
+   144       75154 | 0.16913  0.16913  0.16802  |  0.16770 0.00010   0.16770 0.00010   0.16789 0.00004  |  0.16790 0.00004    184137
+   145       75406 | 0.16641  0.16641  0.16794  |  0.16769 0.00010   0.16769 0.00010   0.16789 0.00004  |  0.16790 0.00004    184930
+   146       73737 | 0.16957  0.16957  0.16801  |  0.16771 0.00010   0.16771 0.00010   0.16789 0.00004  |  0.16790 0.00004    188714
+   147       76322 | 0.17011  0.17011  0.16828  |  0.16773 0.00011   0.16773 0.00011   0.16790 0.00004  |  0.16790 0.00004    191257
+   148       75237 | 0.16823  0.16823  0.16814  |  0.16774 0.00010   0.16774 0.00010   0.16790 0.00004  |  0.16791 0.00004    192729
+   149       74157 | 0.16722  0.16722  0.16815  |  0.16773 0.00010   0.16773 0.00010   0.16790 0.00004  |  0.16791 0.00004    193256
+   150       74528 | 0.16890  0.16890  0.16830  |  0.16774 0.00010   0.16774 0.00010   0.16791 0.00004  |  0.16791 0.00004    194148
+ -----------------------------------------------------------------------------------------------------------------------------------
+
+
+  the largest active cycle keffs by estimator are:                               the smallest active cycle keffs by estimator are:
+
+                   collision 0.17011 on cycle 147                                                  collision 0.16469 on cycle 115
+                  absorption 0.17011 on cycle 147                                                 absorption 0.16469 on cycle 115
+                track length 0.16904 on cycle  59                                               track length 0.16662 on cycle 115
+1individual and collision/absorption/track-length keffs for different numbers of inactive cycles skipped for fission source settling
+
+   skip  active     active    average keff estimators and deviations     normality average k(c/a/t)   k(c/a/t) confidence intervals
+  cycles cycles   neutrons  k(col) st dev  k(abs) st dev  k(trk) st dev  co/ab/tl  k(c/a/t) st dev   95% confidence   99% confidence
+
+     0    150     11189521| 0.1682 0.0004  0.1682 0.0004  0.1684 0.0003 |no/no/no| 0.16845 0.00035  0.16776-0.16915  0.16753-0.16937
+     1    149     11114521| 0.1679 0.0002  0.1679 0.0002  0.1681 0.0001 |no/no/no| 0.16809 0.00013  0.16783-0.16834  0.16775-0.16842
+     2    148     11081809| 0.1678 0.0001  0.1678 0.0001  0.1680 0.0001 |no/no/no| 0.16795 0.00007  0.16782-0.16808  0.16777-0.16812
+     3    147     11017735| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/no| 0.16792 0.00004  0.16783-0.16800  0.16781-0.16803
+     4    146     10947601| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00004  0.16782-0.16797  0.16780-0.16799
+     5    145     10873496| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16788 0.00004  0.16781-0.16795  0.16779-0.16798
+     6    144     10799046| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16788 0.00004  0.16781-0.16795  0.16779-0.16798
+     7    143     10725462| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16787 0.00004  0.16780-0.16794  0.16778-0.16797
+     8    142     10649860| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16787 0.00004  0.16780-0.16794  0.16778-0.16797
+     9    141     10575154| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16787 0.00004  0.16780-0.16794  0.16778-0.16797
+    10    140     10499520| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16788 0.00004  0.16781-0.16795  0.16778-0.16797
+ -----------------------------------------------------------------------------------------------------------------------------------
+    11    139     10425217| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16788 0.00004  0.16781-0.16795  0.16779-0.16797
+    12    138     10349979| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00004  0.16782-0.16796  0.16779-0.16798
+    13    137     10274689| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16790 0.00003  0.16783-0.16797  0.16781-0.16799
+    14    136     10199785| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16790 0.00003  0.16783-0.16797  0.16781-0.16799
+    15    135     10125260| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16790 0.00004  0.16783-0.16797  0.16781-0.16799
+    16    134     10049641| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00003  0.16784-0.16798  0.16781-0.16800
+    17    133      9975443| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16782-0.16800
+    18    132      9899830| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16781-0.16800
+    19    131      9824869| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16782-0.16800
+    20    130      9750353| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16781-0.16800
+ -----------------------------------------------------------------------------------------------------------------------------------
+    22    128      9599322| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16782-0.16801
+    24    126      9449613| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16799  0.16782-0.16801
+    26    124      9299429| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16782-0.16801
+    28    122      9149032| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16781-0.16801
+    30    120      8999499| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16798  0.16781-0.16801
+    32    118      8850167| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16783-0.16798  0.16781-0.16800
+    34    116      8700052| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16783-0.16798  0.16781-0.16801
+    36    114      8550626| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16784-0.16799  0.16782-0.16801
+    38    112      8400139| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16784-0.16799  0.16782-0.16802
+    40    110      8249870| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16784-0.16799  0.16781-0.16802
+ -----------------------------------------------------------------------------------------------------------------------------------
+    42    108      8100394| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16784-0.16799  0.16782-0.16802
+    44    106      7950217| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16784-0.16800  0.16782-0.16803
+    46    104      7799818| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16784-0.16800  0.16781-0.16802
+    48    102      7648885| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16783-0.16799  0.16781-0.16802
+    50    100*     7500201| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16783-0.16799  0.16781-0.16802
+    52     98      7350221| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00004  0.16783-0.16799  0.16780-0.16802
+    54     96      7199518| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16784-0.16800  0.16781-0.16803
+    56     94      7049813| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16783-0.16800  0.16781-0.16803
+    58     92      6899632| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16792 0.00004  0.16783-0.16800  0.16780-0.16803
+    60     90      6749755| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16790 0.00004  0.16782-0.16798  0.16779-0.16800
+ -----------------------------------------------------------------------------------------------------------------------------------
+    62     88      6600109| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16790 0.00004  0.16782-0.16798  0.16779-0.16801
+    64     86      6450061| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00004  0.16781-0.16797  0.16778-0.16800
+    66     84      6300160| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00004  0.16781-0.16798  0.16778-0.16800
+    68     82      6149557| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00004  0.16780-0.16797  0.16777-0.16800
+    70     80      5999736| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00004  0.16780-0.16798  0.16777-0.16800
+    72     78      5849986| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16788 0.00005  0.16779-0.16797  0.16776-0.16800
+    74     76      5699798| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0000 |95/95/95| 0.16788 0.00005  0.16779-0.16797  0.16776-0.16800
+    76     74      5550546| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16789 0.00005  0.16780-0.16798  0.16777-0.16801
+    78     72      5400114| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16790 0.00005  0.16781-0.16800  0.16778-0.16803
+    80     70      5250677| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00005  0.16782-0.16801  0.16779-0.16804
+ -----------------------------------------------------------------------------------------------------------------------------------
+    82     68      5100779| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0000 |95/95/95| 0.16791 0.00005  0.16781-0.16801  0.16778-0.16804
+    84     66      4950278| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0001 |95/95/95| 0.16791 0.00005  0.16781-0.16801  0.16778-0.16805
+    86     64      4800335| 0.1678 0.0001  0.1678 0.0001  0.1679 0.0001 |95/95/95| 0.16793 0.00005  0.16782-0.16803  0.16779-0.16806
+    88     62      4650423| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0001 |95/95/95| 0.16792 0.00005  0.16782-0.16803  0.16778-0.16806
+    90     60      4501061| 0.1677 0.0001  0.1677 0.0001  0.1679 0.0001 |95/95/95| 0.16792 0.00005  0.16781-0.16802  0.16778-0.16806
+    92     58      4350655| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/95| 0.16791 0.00005  0.16780-0.16801  0.16777-0.16805
+    94     56      4201114| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/95| 0.16791 0.00005  0.16781-0.16802  0.16777-0.16806
+    96     54      4051266| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/95| 0.16793 0.00005  0.16782-0.16804  0.16779-0.16808
+    98     52      3899857| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/95| 0.16794 0.00005  0.16783-0.16805  0.16780-0.16809
+   100     50      3749890| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/95| 0.16794 0.00006  0.16783-0.16806  0.16779-0.16809
+ -----------------------------------------------------------------------------------------------------------------------------------
+   102     48      3601508| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/99| 0.16794 0.00006  0.16782-0.16806  0.16778-0.16810
+   104     46      3450737| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/99| 0.16793 0.00006  0.16780-0.16805  0.16776-0.16809
+   106     44      3299985| 0.1678 0.0002  0.1678 0.0002  0.1679 0.0001 |95/95/95| 0.16792 0.00006  0.16779-0.16804  0.16775-0.16809
+   108     42      3150745| 0.1679 0.0002  0.1679 0.0002  0.1679 0.0001 |95/95/95| 0.16792 0.00006  0.16779-0.16806  0.16775-0.16810
+   110     40      3000160| 0.1679 0.0002  0.1679 0.0002  0.1679 0.0001 |95/95/99| 0.16791 0.00007  0.16778-0.16805  0.16774-0.16809
+   112     38      2850176| 0.1679 0.0002  0.1679 0.0002  0.1679 0.0001 |95/95/99| 0.16793 0.00007  0.16779-0.16807  0.16774-0.16812
+   114     36      2699964| 0.1680 0.0002  0.1680 0.0002  0.1679 0.0001 |95/95/no| 0.16793 0.00007  0.16778-0.16807  0.16773-0.16812
+   116     34      2551139| 0.1680 0.0002  0.1680 0.0002  0.1680 0.0001 |95/95/99| 0.16796 0.00007  0.16782-0.16809  0.16777-0.16814
+   118     32      2399847| 0.1681 0.0002  0.1681 0.0002  0.1680 0.0001 |95/95/99| 0.16798 0.00007  0.16783-0.16812  0.16778-0.16817
+   120     30      2249606| 0.1681 0.0002  0.1681 0.0002  0.1680 0.0001 |95/95/99| 0.16795 0.00007  0.16780-0.16810  0.16775-0.16816
+ -----------------------------------------------------------------------------------------------------------------------------------
+   122     28      2099087| 0.1681 0.0002  0.1681 0.0002  0.1679 0.0001 |95/95/95| 0.16792 0.00008  0.16777-0.16808  0.16771-0.16814
+   124     26      1949285| 0.1681 0.0002  0.1681 0.0002  0.1680 0.0001 |95/95/99| 0.16796 0.00008  0.16779-0.16812  0.16774-0.16817
+   126     24      1799441| 0.1681 0.0002  0.1681 0.0002  0.1680 0.0001 |95/95/99| 0.16796 0.00008  0.16779-0.16813  0.16773-0.16819
+   128     22      1650002| 0.1681 0.0002  0.1681 0.0002  0.1680 0.0001 |95/95/99| 0.16799 0.00009  0.16781-0.16817  0.16774-0.16823
+   130     20      1499120| 0.1681 0.0003  0.1681 0.0003  0.1679 0.0001 |95/95/99| 0.16794 0.00009  0.16776-0.16813  0.16769-0.16820
+   132     18      1349726| 0.1682 0.0003  0.1682 0.0003  0.1679 0.0001 |95/95/99| 0.16789 0.00009  0.16769-0.16809  0.16761-0.16817
+   134     16      1199819| 0.1682 0.0003  0.1682 0.0003  0.1679 0.0001 |95/95/99| 0.16787 0.00010  0.16764-0.16809  0.16755-0.16818
+   136     14      1049548| 0.1684 0.0003  0.1684 0.0003  0.1679 0.0001 |95/95/99| 0.16789 0.00012  0.16763-0.16815  0.16752-0.16826
+   138     12       899578| 0.1686 0.0003  0.1686 0.0003  0.1681 0.0001 |95/95/95| 0.16806 0.00009  0.16786-0.16825  0.16778-0.16833
+   140     10       748574| 0.1684 0.0004  0.1684 0.0004  0.1680 0.0001 |95/95/95| 0.16803 0.00009  0.16782-0.16824  0.16772-0.16834
+ -----------------------------------------------------------------------------------------------------------------------------------
+   142      8       599070| 0.1685 0.0004  0.1685 0.0004  0.1681 0.0001 |95/95/95| 0.16807 0.00007  0.16789-0.16824  0.16779-0.16834
+   144      6       449387| 0.1684 0.0006  0.1684 0.0006  0.1681 0.0001 |95/95/95| 0.16812 0.00006  0.16794-0.16831  0.16779-0.16846
+   146      4       300244| 0.1686 0.0006  0.1686 0.0006  0.1682 0.0000 |95/95/95| 0.16820 0.00004  0.16775-0.16865  0.16595-0.17045
+   147      3       223922| 0.1681 0.0005  0.1681 0.0005  0.1682 0.0001 |
+   148      2       148685| 0.1681 0.0008  0.1681 0.0008  0.1682 0.0001 |
+
+
+ the minimum estimated standard deviation for the col/abs/tl keff estimator occurs with  13 inactive cycles and  137 active cycles.
+
+
+ the first active half of the problem skips 50 cycles and uses  50 active cycles; the second half skips 100 and uses  50 cycles.
+ the col/abs/trk-len keff, one standard deviation, and 68, 95, and 99 percent intervals for each active half of the problem are:
+
+              problem        keff     standard deviation       68% confidence         95% confidence         99% confidence
+
+            first half     0.16788         0.00006           0.16782 to 0.16794     0.16776 to 0.16799     0.16773 to 0.16803
+           second half     0.16794         0.00006           0.16789 to 0.16800     0.16783 to 0.16806     0.16779 to 0.16809
+          final result     0.16791         0.00004           0.16787 to 0.16795     0.16783 to 0.16799     0.16781 to 0.16802
+
+ the first and second half values of k(collision/absorption/track length) appear to be the same at the 68 percent confidence level.
+
+ ***********************************************************************************************************************
+
+ dump no.    2 on file ./output-files/flibe-enriched-005.0cm.mcnp.r     nps =    11189521     coll =       25247760    
+ ctm =        3.36   nrn =         384276004
+
+         3 warning messages so far.
+
+
+ run terminated when     150 kcode cycles were done.
+
+ computer time =    3.37 minutes
+
+ mcnp     version 6     05/08/13                     02/27/15 01:46:20                     probid =  02/27/15 01:42:58 
