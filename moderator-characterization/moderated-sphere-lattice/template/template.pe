@@ -2,12 +2,13 @@ $py(import pickle as p; d = open(data, "rb" ))\
 $py(description = p.load(d))\
 $py(density = p.load(d))\
 $py(material_card = p.load(d))\
-$py(radius = p.load(d))\
+$py(margin = p.load(d))\
 $py(particles_per_cycle = p.load(d))\
 $py(criticality_guess = p.load(d))\
 $py(skipped_cycles = p.load(d))\
 $py(total_cycles = p.load(d))\
-Moderator Qualification - Uranium Marble - $(description) - $(radius) cm cube lattice
+$py(edge = 2.0*(1.23240339093 + float(margin)))\
+Uranium Marble - $(description) - $(edge) cm cube lattice
 C 
 C 
 C Cell Cards
@@ -21,10 +22,10 @@ C Surface Cards
 C ------------------
 C j	a	list
   1     so      $(1.23240339093)
- *2     box     $(-1.23240339093 - float(radius)) $(-1.23240339093 - float(radius)) $(-1.23240339093 - float(radius)) \$ rear left lower corner
-                $(2*(1.23240339093 + float(radius))) 0.0000 0.0000
-                0.0000 $(2*(1.23240339093 + float(radius))) 0.0000
-                0.0000 0.0000 $(2*(1.23240339093 + float(radius)))
+ *2     box     $(-edge/2.0) $(-edge/2.0) $(-edge/2.0) \$ rear left lower corner
+                $(edge) 0.0000 0.0000
+                0.0000 $(edge) 0.0000
+                0.0000 0.0000 $(edge)
 
 C Data Cards
 C ------------------
