@@ -30,45 +30,42 @@ material_cards = {
 '     9019   4   $ Elemental Fluorine'
 }
 
-radii = ['000.5', 
-         '001.0',
-         '001.5',
-         '002.0',
-         '003.0',
-         '004.0', 
-         '005.0', 
-         '007.5', 
-         '010.0', 
-         '012.5',
-         '015.0']
+margins = ['0.125', 
+           '0.250',
+           '0.375',
+           '0.500',
+           '0.625',
+           '0.750', 
+           '0.875', 
+           '1.000', 
+           '1.250', 
+           '1.500',
+           '1.750',
+           '2.000',
+           '2.500',
+           '3.000']
 
 import os         
 import pickle
 import pyexpander
 
+input_dict = {}
 for moderator in descriptions:
-    for r in radii:
-        handle = titles[moderator] + '-' + r + 'cm'
+    for m in margins:
+        handle = titles[moderator] + '-' + m + 'cm'
 
-        description = moderator
-        density = densities[moderator]
-        material_card = material_cards[moderator]
-        radius = r
-        particles_per_cycle = 75000
-        criticality_guess = 0.50
-        skipped_cycles = 50
-        total_cycles = 150
+        input_dict['description'] = moderator
+        input_dict['density'] = densities[moderator]
+        input_dict['material_card'] = material_cards[moderator]
+        input_dict['margin'] = m
+        input_dict['particles_per_cycle'] = 75000
+        input_dict['criticality_guess'] = 1.20
+        input_dict['skipped_cycles'] = 10
+        input_dict['total_cycles'] = 50
 
         data_filename = os.path.join('.','data', handle + '.mcnp.p')
         data = open(data_filename, 'wb')        
-        pickle.dump(description, data)
-        pickle.dump(density, data)
-        pickle.dump(material_card, data)
-        pickle.dump(radius, data)
-        pickle.dump(particles_per_cycle, data)
-        pickle.dump(criticality_guess, data)
-        pickle.dump(skipped_cycles, data)
-        pickle.dump(total_cycles, data)
+        pickle.dump(input_dict, data)
         data.close()
 
         input_filename = os.path.join('.','input-files', handle + '.mcnp.i')

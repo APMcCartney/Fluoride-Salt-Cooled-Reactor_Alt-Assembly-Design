@@ -55,29 +55,23 @@ import os
 import pickle
 import pyexpander
 
+input_dict = {}
 for moderator in descriptions:
     for r in radii:
         handle = titles[moderator] + '-' + r + 'cm'
 
-        description = moderator
-        density = densities[moderator]
-        material_card = material_cards[moderator]
-        radius = r
-        particles_per_cycle = 75000
-        criticality_guess = 0.50
-        skipped_cycles = 50
-        total_cycles = 150
+        input_dict['description'] = moderator
+        input_dict['density'] = densities[moderator]
+        input_dict['material_card'] = material_cards[moderator]
+        input_dict['radius'] = r
+        input_dict['particles_per_cycle'] = 75000
+        input_dict['criticality_guess'] = 0.50
+        input_dict['skipped_cycles'] = 50
+        input_dict['total_cycles'] = 150
 
         data_filename = os.path.join('.','data', handle + '.mcnp.p')
         data = open(data_filename, 'wb')        
-        pickle.dump(description, data)
-        pickle.dump(density, data)
-        pickle.dump(material_card, data)
-        pickle.dump(radius, data)
-        pickle.dump(particles_per_cycle, data)
-        pickle.dump(criticality_guess, data)
-        pickle.dump(skipped_cycles, data)
-        pickle.dump(total_cycles, data)
+        pickle.dump(input_dict, data)
         data.close()
 
         input_filename = os.path.join('.','input-files', handle + '.mcnp.i')
