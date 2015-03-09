@@ -1,0 +1,60 @@
+$py(import pickle)\
+$py(d = open(data, 'rb'))\
+$py(value = pickle.load(d))\
+$py(description = value['description'])\
+$py(mat = value['material-dict'])\
+$py(geom = value['geometry-dict'])\
+$py(crit = value['criticality-dict'])\
+$py(has = value['condition-dict'])\
+FHR - Alt Assembly Pin Cell - $(description)
+c 
+c ~~~ cells cards ~~~~~~~
+c 
+00001    $(mat['fuel']['ID'][0]) $(mat['fuel']['density']) -1001 -0001  imp:N=1
+$if(has['poison'])\
+00010    $(mat['poison']['ID'][0]) $(mat['poison']['density']) -1001 -0010 0001  imp:N=1
+00011    $(mat['gap']['ID'][0]) $(mat['gap']['density']) -1001 -0011 0010  imp:N=1
+$else\
+00011    $(mat['gap']['ID'][0]) $(mat['gap']['density']) -1001 -0011 0001  imp:N=1
+$endif\
+00012    $(mat['clad']['ID'][0]) $(mat['clad']['density']) -1001 -0012 0011  imp:N=1
+$if(has['coolant'])\
+00013    $(mat['coolant']['ID'][0]) $(mat['coolant']['density']) -1001 0012  imp:N=1
+$else\
+00013    0 -1001 0012  imp:N=1
+$endif\
+99999    0 1001 imp:N=0
+
+c ~~~ surface cards ~~~~~~~
+c 
+ 0001     cz $(geom['fuel-radius']) \$ fuel-radius
+$if(has['poison'])\
+ 0010     cz $(geom['poison-radius']) \$ fuel-radius + poison-thickness
+ 0011     cz $(geom['gap-radius']) \$ fuel-radius + poison-thickness + gap-width
+ 0012     cz $(geom['clad-radius']) \$ fuel-radius + poison-thickness + gap-width + clad-thickness
+$else\
+ 0011     cz $(geom['gap-radius']) \$ fuel-radius + gap-width
+ 0012     cz $(geom['clad-radius']) \$ fuel-radius + gap-width + clad-thickness
+$endif\
+*1001     hex $(geom['hex']['base']) \$ hex-base
+              $(geom['hex']['height']) \$ hex-height
+              $(geom['hex']['facet'][0]) \$ vector to first facet 
+              $(geom['hex']['facet'][1]) \$ vector to second facet 
+              $(geom['hex']['facet'][2]) \$ vector to third facet 
+
+c ~~~ data cards ~~~~~~~
+c 
+c   + material cards
+c 
+c 
+$for(i in range(len(mat.keys())))\
+m$(mat[mat.keys()[i]]['ID'][0]) $(mat[mat.keys()[i]]['card'])
+$endfor\
+c   
+c   + initial fission source card
+c 
+ksrc $(crit['ksrc'])
+c 
+c   + criticality calculation card
+c 
+kcode $(crit['particles-per-cycle']) $(crit['criticality-guess']) $(crit['skipped-cycles']) $(crit['total-cycles'])
