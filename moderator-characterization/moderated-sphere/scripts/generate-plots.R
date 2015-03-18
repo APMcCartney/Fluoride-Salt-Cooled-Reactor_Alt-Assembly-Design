@@ -22,6 +22,14 @@ criticality.plot = ggplot(data, aes(x = radius, y = criticality, colour = descri
     ggtitle('Criticality of a Moderated Sphere of Uranium')
 ggsave(criticality.plot, file="./plots/criticality-plot.eps", width=9, height=6)
 
+plot0 <- ggplot(data, aes(x = radius, y = energy.fission.causing.neutrons, colour = description)) +
+    geom_line() +
+    geom_point() +
+    xlab('Moderator Thickness (cm)') +  
+    ylab('Energy (MeV)') +
+    ggtitle('Mean Energy of Neutrons causing Fission\nin a Moderated Sphere of Uranium')
+ggsave( plot0, file="./plots/energy-plot.eps", width=9, height=6)
+
 distilled.data = select(data, radius, description, fast.fission, epithermal.fission, thermal.fission)
 
 flibe.natural <- melt(select(filter(distilled.data, description == 'FLiBe w/ Natural Li'), -description), id.vars = c('radius'))
@@ -59,5 +67,5 @@ plot3 <- ggplot(graphite, aes(x = radius, fill = variable, weight = value)) +
 
 setEPS()
 postscript("./plots/composite.eps", width = 11, height = 6)
-composite <- grid.arrange(criticality.plot, plot1, plot2, plot3, ncol=2)
+composite <- grid.arrange(plot0, plot1, plot2, plot3, ncol=2)
 dev.off()

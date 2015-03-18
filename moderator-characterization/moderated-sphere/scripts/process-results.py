@@ -15,4 +15,5 @@ for f in l:
     o.append(os.path.join('.','output-files',f[0:-1]+'o'))
     p.append(os.path.join('.','data',f[0:-1]+'p'))
 
-aggregate.output(output_filenames = o, pickle_filenames = p)
+data_df = aggregate.output(output_filenames = o, pickle_filenames = p)
+data_df.to_csv(os.path.join('.','data','data.csv'))
